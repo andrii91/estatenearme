@@ -1,6 +1,16 @@
 @import 'variables';
 
+.header-main {
+  background: url(../images/main-bg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 40px;
+  padding: 119px 0;
+}
+
 body {
   overflow-x: hidden;
+  font-family: Manrope, sans-serif;
   @import 'MediaQueries/main';
 }
