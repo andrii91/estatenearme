@@ -20,7 +20,7 @@
 
 <body> 
 
-  <nav class="nav py-3 w-full fixed top-0 left-0 bg-white z-10">
+  <nav class="nav py-3 w-full fixed top-0 left-0 bg-white z-50">
     <div class="mx-auto px-4 max-w-[1232px]">
       <div class="flex flex-row items-center justify-between gap-3 relative">
         <a href="index.html" class="logo block max-w-[245px] mr-6 lg:mr-0">
@@ -28,13 +28,34 @@
         </a>
 
         <ul class="menu hidden w-full lg:w-auto lg:!flex item-center flex-col lg:flex-row gap-6 absolute top-full lg:static px-4 py-8 lg:p-0 bg-white">
-          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm" href="#">Новостройки</a></li>
-          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm" href="#">Квартиры</a></li>
-          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm" href="#">Дома</a></li>
-          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm" href="#">Коммерческая</a></li>
-          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm" href="#">Участки</a></li>
-          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm" href="#">Buildings</a></li>
-          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm" href="#">Компании</a></li>
+          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm block py-3 lg:py-0" href="#">Новостройки</a></li>
+          <li class="group relative">
+            <a class="transition text-black hover:text-[#FF6B2A] text-sm block py-3 lg:py-0" href="#">Квартиры</a>
+            <ul class="hidden submenu group-hover:block py-5 z-20 absolute  w-64 bg-white rounded-xl drop-shadow-2xl" >
+              <li>
+            <a href="https://spain.estatenearme.com/ru/category/sale/flats/penthouses" class="px-5 py-2 block w-full text-[#757575] hover:bg-[#FAF1ED] font-semibold">Пентхаус</a>
+            </li>
+                          <li>
+            <a href="https://spain.estatenearme.com/ru/category/sale/flats/apartments" class="px-5 py-2 block w-full text-[#757575] hover:bg-[#FAF1ED] font-semibold">Апартаменты</a>
+            </li>
+                          <li>
+            <a href="https://spain.estatenearme.com/ru/category/sale/flats/ground-floors" class="px-5 py-2 block w-full text-[#757575] hover:bg-[#FAF1ED] font-semibold">Цокальный этаж</a>
+            </li>
+                          <li>
+            <a href="https://spain.estatenearme.com/ru/category/sale/flats/duplexes" class="px-5 py-2 block w-full text-[#757575] hover:bg-[#FAF1ED] font-semibold">Дуплексы</a>
+            </li>
+
+            <li>
+            <a href="https://spain.estatenearme.com/ru/category/sale/flats" class="px-5 py-2 block w-full text-[#757575] hover:bg-[#FAF1ED] font-semibold">
+            Продажа Квартиры в Spain                                            </a>
+            </li>
+            </ul>
+          </li>
+          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm block py-3 lg:py-0" href="#">Дома</a></li>
+          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm block py-3 lg:py-0" href="#">Коммерческая</a></li>
+          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm block py-3 lg:py-0" href="#">Участки</a></li>
+          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm block py-3 lg:py-0" href="#">Buildings</a></li>
+          <li><a class="transition text-black hover:text-[#FF6B2A] text-sm block py-3 lg:py-0" href="#">Компании</a></li>
         </ul>
 
         <button class="toggle-menu inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-auto">
@@ -54,30 +75,30 @@
             </div>
 
             <div class="lang-items hidden absolute top-full right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white/90 py-1 shadow-lg">
-              <a href="https://spain.estatenearme.com/es/lang/set/en" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white rounded-md">
+              <a href="https://spain.estatenearme.com/es/lang/set/en" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white transition rounded-md">
                 <img class="h-4 w-4 mr-2" src="https://spain.estatenearme.com/images/icons/lang/en.png" alt="">
               English
               </a>
-              <a href="https://spain.estatenearme.com/es/lang/set/es" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white rounded-md">
+              <a href="https://spain.estatenearme.com/es/lang/set/es" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white transition rounded-md">
                 <img class="h-4 w-4 mr-2" src="https://spain.estatenearme.com/images/icons/lang/es.png" alt="">
               Spanish
               </a>
-              <a href="https://spain.estatenearme.com/es/lang/set/it" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white rounded-md">
+              <a href="https://spain.estatenearme.com/es/lang/set/it" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white transition rounded-md">
                 <img class="h-4 w-4 mr-2" src="https://spain.estatenearme.com/images/icons/lang/it.png" alt="">
               Italian
               </a>
-              <a href="https://spain.estatenearme.com/es/lang/set/pt" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white rounded-md">
+              <a href="https://spain.estatenearme.com/es/lang/set/pt" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white transition rounded-md">
                 <img class="h-4 w-4 mr-2" src="https://spain.estatenearme.com/images/icons/lang/pt.png" alt="">
               Portuguese
               </a>
-              <a href="https://spain.estatenearme.com/es/lang/set/ru" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white rounded-md">
+              <a href="https://spain.estatenearme.com/es/lang/set/ru" class="flex items-center px-4 py-2 text-sm text-black hover:bg-white transition rounded-md">
                 <img class="h-4 w-4 mr-2" src="https://spain.estatenearme.com/images/icons/lang/ru.png" alt="">
               Russian
               </a>
             </div>
           </div>
 
-          <a href="https://spain.estatenearme.com/es/login" class="flex items-center lg:px-5 lg:py-[13px] lg:border border-black text-base text-black rounded-md leading-none hover:border-[#FFB391] hover:bg-[#FF6B2A] transition">
+          <a href="https://spain.estatenearme.com/es/login" class="flex items-center lg:px-5 lg:py-[13px] lg:border border-black text-base text-black rounded-md leading-none hover:border-[#16171A] hover:bg-[#16171A] hover:text-white transition">
             <svg class="w-6 h-6 lg:mr-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path fill="none" d="M0 0h24v24H0z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 4h10v14a2 2 0 0 1-2 2H9m3-5 3-3m0 0-3-3m3 3H5"/></svg>
             <span class="hidden lg:inline">Войти</span>
           </a>
@@ -87,23 +108,466 @@
   </nav>
 
   <header class="py-20">
-    <div class="mx-auto px-4 max-w-[1232px]">
-      <div class="header-main aspect-square md:aspect-[1482/515]	flex flex-col items-center justify-center py-32">
-        <div class="max-w-[940px] text-right px-2">
-          <h1 class="text-white text-xl sm:text-4xl lg:text-6xl font-[Gilroy]">Properties for sale and rent in  <span class="text-black p-2 rounded-md bg-white lg:ml-6 ml-2 -mb-3 inline-block font-bold">Spain</span></h1>
-          <p class="lg:text-xl text-black bg-white p-1.5 rounded-md inline-block font-medium	">Houses, apartments, premises, land, new buildings <span class="font-bold text-[#FF6B2A]">to buy or rent</span></p>
+    <div class="mx-auto md:px-4 max-w-[1482px]">
+      <div class="header-main bg-[url('images/main-bg.webp')] bg-no-repeat bg-center bg-cover rounded-2xl md:rounded-[40px] aspect-square md:aspect-[1482/515] flex flex-col items-center justify-center py-32">
+        <div class="max-w-[1050px] text-right px-2">
+          <h1 class="text-white text-xl sm:text-4xl xl:text-6xl font-[Gilroy] font-semibold	">Properties for sale and rent in  <span class="text-black p-2 rounded-md bg-white lg:ml-6 ml-2 -mb-3 inline-block font-bold">Spain</span></h1>
+          <p class="lg:text-xl text-black bg-white p-1.5 rounded-md inline-block font-medium">Houses, apartments, premises, land, new buildings <span class="font-bold text-[#FF6B2A]">to buy or rent</span></p>
         </div>
       </div>
-      <form action="#">
-        
+    </div>
+    <div class="mx-auto md:px-4 max-w-[1232px]">
+      <form action="#" class="flex flex-col w-full -mt-[119px] px-2 md:px-4">
+        <div class="flex items-start flex-wrap flex-auto md:flex-nowrap w-auto rounded-t-2xl overflow-hidden">
+          <button data-radio="Новостройки" class="radio-type-button bg-[#16171A] !bg-white !text-[#16171A] flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition hover:text-[#16171A]">Новостройки</button>
+          <button data-radio="Квартиры" class="radio-type-button bg-[#16171A] flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition hover:text-[#16171A]">Квартиры</button>
+          <button data-radio="Дома" class="radio-type-button bg-[#16171A] flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition hover:text-[#16171A]">Дома</button>
+          <button data-radio="Коммерческая" class="radio-type-button bg-[#16171A] flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition hover:text-[#16171A]">Коммерческая</button>
+          <button data-radio="" class="radio-type-button bg-[#16171A] flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition hover:text-[#16171A]">Участки</button>
+          <button data-radio="Buildings" class="radio-type-button bg-[#16171A] flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition hover:text-[#16171A] md:rounded-tr-2xl">Buildings</button>
+
+          <input id="radio-type" type="hidden" name="type" value="Новостройки">
+        </div>
+        <div class="bg-white px-6 py-8 rounded-b-2xl md:rounded-tr-2xl shadow-2xl">
+          <div class="flex flex-wrap lg:flex-nowrap mb-5 items-center gap-4">
+            <button data-checkbox="Продажа" class="checkbox-button text-sm rounded-xl shadow border border-transparent !border-[#FFB391] text-[#16171A] py-3.5 px-6 flex items-center gap-2.5"> 
+              Продажа
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6.0001 10.78L3.2201 7.99999L2.27344 8.93999L6.0001 12.6667L14.0001 4.66665L13.0601 3.72665L6.0001 10.78Z" fill="#FF6B2A"/>
+              </svg>
+            </button>
+            <button data-checkbox="Аренда" class="checkbox-button text-sm rounded-xl shadow border border-transparent text-[#16171A] py-3.5 px-6 flex items-center gap-2.5"> 
+              Аренда
+              <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6.0001 10.78L3.2201 7.99999L2.27344 8.93999L6.0001 12.6667L14.0001 4.66665L13.0601 3.72665L6.0001 10.78Z" fill="#FF6B2A"/>
+              </svg>
+            </button>
+            <input id="#checkbox-type" type="hidden" name="" value="Продажа">
+            <div class="flex-auto relative">
+              <input type="text" name="search" class="search-input py-3.5 pr-6 bg-[#F3F4F5] rounded-xl w-full text-sm text-[#16171A] pl-14 placeholder:text-[#16171A]" placeholder="Название, город, комплекс">
+              <div class="search-input-helps hidden gap-1 px-3 py-3.5 absolute top-full z-10 bg-white w-full shadow-xl">
+                <a href="#" class="flex items-center justify-between w-full font-medium text-sm text-[#757575] py-1 px-5 hover:bg-[#F3F4F5] transition rounded-lg">
+                  Denia Beach
+                  <span class="rounded-lg bg-[#FAF1ED] text-xs font-light px-3 py-1.5">Комплекс</span>
+                </a>
+                <a href="#" class="flex items-center justify-between w-full font-medium text-sm text-[#757575] py-1 px-5 hover:bg-[#F3F4F5] transition rounded-lg">
+                  Denia Beach
+                  <span class="rounded-lg bg-[#FAF1ED] text-xs font-light px-3 py-1.5">Комплекс</span>
+                </a>
+                <a href="#" class="flex items-center justify-between w-full font-medium text-sm text-[#757575] py-1 px-5 hover:bg-[#F3F4F5] transition rounded-lg">
+                  Denia Beach
+                  <span class="rounded-lg bg-[#FAF1ED] text-xs font-light px-3 py-1.5">Комплекс</span>
+                </a>
+                <a href="#" class="flex items-center justify-between w-full font-medium text-sm text-[#757575] py-1 px-5 hover:bg-[#F3F4F5] transition rounded-lg">
+                  Denia Beach
+                  <span class="rounded-lg bg-[#FAF1ED] text-xs font-light px-3 py-1.5">Комплекс</span>
+                </a>
+                <a href="#" class="flex items-center justify-between w-full font-medium text-sm text-[#757575] py-1 px-5 hover:bg-[#F3F4F5] transition rounded-lg">
+                  Denia Beach
+                  <span class="rounded-lg bg-[#FAF1ED] text-xs font-light px-3 py-1.5">Комплекс</span>
+                </a>
+                <a href="#" class="flex items-center justify-between w-full font-medium text-sm text-[#757575] py-1 px-5 hover:bg-[#F3F4F5] transition rounded-lg">
+                  Denia Beach
+                  <span class="rounded-lg bg-[#FAF1ED] text-xs font-light px-3 py-1.5">Провинция</span>
+                </a>
+                <a href="#" class="flex items-center justify-between w-full font-medium text-sm text-[#757575] py-1 px-5 hover:bg-[#F3F4F5] transition rounded-lg">
+                  Denia Beach
+                  <span class="rounded-lg bg-[#FAF1ED] text-xs font-light px-3 py-1.5">Город</span>
+                </a>
+              </div>
+            </div>
+            <button type="submit" class="bg-[#FF6B2A] rounded-xl gap-3 text-sm font-bold px-6 py-3.5 flex items-center text-white hover:bg-[#E34B31] shadow-lg shadow-[rgba(255, 128, 72, 0.20)] transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9.5 3C11.2239 3 12.8772 3.68482 14.0962 4.90381C15.3152 6.12279 16 7.77609 16 9.5C16 11.11 15.41 12.59 14.44 13.73L14.71 14H15.5L20.5 19L19 20.5L14 15.5V14.71L13.73 14.44C12.5505 15.4468 11.0507 15.9999 9.5 16C7.77609 16 6.12279 15.3152 4.90381 14.0962C3.68482 12.8772 3 11.2239 3 9.5C3 7.77609 3.68482 6.12279 4.90381 4.90381C6.12279 3.68482 7.77609 3 9.5 3ZM9.5 5C7 5 5 7 5 9.5C5 12 7 14 9.5 14C12 14 14 12 14 9.5C14 7 12 5 9.5 5Z" fill="currentColor"/>
+              </svg>
+              Поиск 
+            </button>
+          </div>
+          <p class="text-sm text-[#5E5E5E] font-medium">Найдите все виды жилья, сообществ, домов, недавно построенных квартир, на планах или работах, выполненных отечественными разработчиками</p>
+        </div>
       </form>
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section class="py-20">
+      <div class="mx-auto px-4 max-w-[1232px]">
+        <div class="flex items-center flex-wrap md:flex-nowrap">
+          <div>
+            <h2 class="font-bold text-4xl	pb-6 mb-6 after:w-20 after:block after:absolute after:bottom-0 after:left-0 after:h-[5px] after:rounded-md after:bg-[#FF6B2A] relative">Топ-10 лучших провинций для покупки недвижимости</h2>
+            <p class="text-lg text-[#5E5E5E] font-medium max-w-[858px] mb-14">В вашем распоряжении самые популярные районы и количество домов, квартир, помещений, доступных для покупки или аренды</p>
+          </div>
+          <div class="flex items-center gap-5 ml-auto mb-8 md:mb-0">
+            <button class="prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5785 12.1072L16.5285 7.15719L15.1145 5.74319L8.75049 12.1072L15.1145 18.4712L16.5285 17.0572L11.5785 12.1072Z" fill="currentColor"/>
+              </svg>
+            </button>
+            <button class="next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.4215 12.1072L8.47152 7.15719L9.88551 5.74319L16.2495 12.1072L9.88551 18.4712L8.47151 17.0572L13.4215 12.1072Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="slider-estate">
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+        <div class="estate-item !flex flex-col md:flex-row gap-6 rounded-3xl border border-transparent hover:border-[#DADADA] group relative">
+          <div class="flex flex-col -m-px relative mx-auto md:-mx-px max-w-60 overflow-hidden after:block after:absolute bg-gradient after:inset-0 after:z-10 rounded-3xl">
+            <img class="aspect-[238/270] w-full object-cover rounded-3xl relative z-[1]" src="images/img.webp" alt="">
+            <div class="flex items-center justify-between absolute bottom-5 left-0 right-0 w-full z-20 px-5 gap-4">
+              <button class="font-bold py-2.5 px-5 bg-[#16171A] rounded-full text-white">Barcelona</button>
+              <div class="text-white text-sm font-medium">
+                <span class="font-bold text-xl">3623</span>
+                объектов 
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full flex-auto p-5">
+            <div class="rounded-full text-white font-bold bg-[#FF6B2A] px-3.5 py-2.5 ml-auto mb-10">1 000 € - 894 000 €</div>
+            <ul class="gap-2">
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g clip-path="url(#a1)"><path fill="currentColor" d="M13.973 3.547 13.114.795a.284.284 0 0 0-.27-.2H1.153a.285.285 0 0 0-.271.2l-.87 2.79a.283.283 0 0 0 .271.369H.96V14.12c0 .157.127.284.284.284h4.511v-3.2c0-.458.559-1.178 1.246-1.178.687 0 1.246.72 1.246 1.178v3.2h4.508a.284.284 0 0 0 .284-.284V3.954h.678a.284.284 0 0 0 .257-.406Zm-9.794 8.72a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.369Zm0-3.012a.284.284 0 0 1-.285.285H2.63a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H2.63a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 3.012a.284.284 0 0 1-.283.285H5.12a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284H5.12a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Zm2.493 3.012a.284.284 0 0 1-.285.285H7.612a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.265c.157 0 .285.127.285.284v1.368Zm0-3.012a.284.284 0 0 1-.285.284H7.612a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.265c.157 0 .285.128.285.285v1.368Zm2.49 6.024a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.284v-1.369c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.369Zm0-3.012a.284.284 0 0 1-.283.285h-1.266a.284.284 0 0 1-.284-.285V7.887c0-.157.127-.284.284-.284h1.266c.157 0 .284.127.284.284v1.368Zm0-3.012a.284.284 0 0 1-.283.284h-1.266a.284.284 0 0 1-.284-.284V4.875c0-.157.127-.285.284-.285h1.266c.157 0 .284.128.284.285v1.368Z"/></g><defs><clipPath id="a1"><path fill="none" d="M0 .596h14v13.809H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Квартиры</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="13" fill="none"><g clip-path="url(#a2)"><path fill="currentColor" d="M13.899 6.256 7.184.577a.286.286 0 0 0-.368 0L4.76 2.317V.566a.286.286 0 0 0-.286-.285H2.655a.286.286 0 0 0-.285.286v3.769L.1 6.256a.286.286 0 0 0 .184.503h1.782v5.673c0 .158.128.285.285.285h3.393V9.1c0-.47.563-1.102 1.254-1.102.692 0 1.256.633 1.256 1.102v3.617h3.392a.285.285 0 0 0 .286-.285V6.759h1.781a.286.286 0 0 0 .184-.503Z"/></g><defs><clipPath id="a2"><path fill="none" d="M0 .282h14v12.435H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Дома</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a3)"><path d="M0 2.29V13.3c0 .188.153.34.341.34h3.914a.341.341 0 0 0 .34-.34v-.362c0-.189.154-.342.342-.342h.137a.341.341 0 0 0 .34-.34V2.29a.341.341 0 0 0-.34-.341H.34a.341.341 0 0 0-.341.34Zm1.805 9.65h-.751a.341.341 0 0 1-.341-.34v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.434h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.153-.34.341-.34h.751c.188 0 .341.152.341.34v.72a.341.341 0 0 1-.341.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.153-.341.341-.341h.751c.188 0 .341.153.341.341v.719a.341.341 0 0 1-.341.34ZM4.49 11.94h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.435h-.751a.341.341 0 0 1-.341-.34v-.72c0-.188.152-.34.34-.34h.752c.188 0 .34.152.34.34v.72a.341.341 0 0 1-.34.34Zm0-2.424h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Zm0-2.425h-.751a.341.341 0 0 1-.341-.341v-.719c0-.188.152-.341.34-.341h.752c.188 0 .34.153.34.341v.719a.341.341 0 0 1-.34.34Z"/><path d="M13.135 12.993V.83a.341.341 0 0 0-.34-.341H6.256a.341.341 0 0 0-.342.34v12.165a.341.341 0 0 1-.34.342h-.198a.341.341 0 0 0-.341.341v.496c0 .188.152.34.34.34h8.282a.341.341 0 0 0 .342-.34v-.496a.341.341 0 0 0-.342-.341h-.182a.341.341 0 0 1-.341-.342Zm-2.973.768h-1.29a.341.341 0 0 1-.34-.34v-.926c0-.188.152-.341.34-.341h1.29c.189 0 .342.153.342.341v.925a.341.341 0 0 1-.342.341Zm1.858-2.36H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.213H6.88a.341.341 0 1 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.212H6.88a.341.341 0 0 1 0-.683h5.141a.341.341 0 1 1 0 .683Zm0-1.213H6.88a.341.341 0 0 1 0-.682h5.141a.341.341 0 1 1 0 .682Z"/></g><defs><clipPath id="a3"><path fill="none" d="M0 .488h14v14.025H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Новостройки</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="group-hover:text-[#FFB391] transition" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"><g fill="currentColor" clip-path="url(#a4)"><path d="M13.825 13.033H.175a.175.175 0 0 0-.175.175v1.319c0 .097.078.175.175.175h13.65a.175.175 0 0 0 .175-.175v-1.32a.175.175 0 0 0-.175-.174Z"/><path d="M13.126 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .174-.175V5.615a.175.175 0 0 0-.175-.175ZM1.306 5.44h-.243a.175.175 0 0 0-.175.175v7.512c0 .097.078.175.175.175h.243a.175.175 0 0 0 .175-.175V5.615a.175.175 0 0 0-.175-.175ZM6.825 6.625H2.544a.175.175 0 0 0-.175.175v.243c0 .096.078.174.175.174h4.281A.175.175 0 0 0 7 7.043V6.8a.175.175 0 0 0-.175-.175ZM7.418 10.79H2.31a.175.175 0 0 0-.175.174v.243c0 .096.078.174.175.174h5.107a.175.175 0 0 0 .175-.174v-.243a.175.175 0 0 0-.175-.175Z"/><path d="M2.868 6.625h-.324a.175.175 0 0 0-.175.175v4.11c0 .097.078.175.175.175h.324a.175.175 0 0 0 .174-.174V6.8a.175.175 0 0 0-.174-.175ZM6.825 6.625h-.324a.175.175 0 0 0-.174.175v4.11c0 .097.078.175.174.175h.324A.175.175 0 0 0 7 10.912V6.8a.175.175 0 0 0-.175-.175ZM8.32 6.8v5.331c0 .096.078.175.174.175h3.231a.175.175 0 0 0 .175-.175V6.8a.175.175 0 0 0-.175-.175h-3.23a.175.175 0 0 0-.176.175Zm.497 3.11a.175.175 0 0 1-.174-.175V8.496a.175.175 0 0 1 .35 0v1.239a.175.175 0 0 1-.176.175ZM13.265 5.602H.682a.472.472 0 0 1-.442-.639L1.877.604a.472.472 0 0 1 .442-.306h8.954c.185 0 .353.108.43.276l1.991 4.36a.472.472 0 0 1-.43.668Z"/><path d="M13.825 3.448H.175A.175.175 0 0 0 0 3.623v1.804c0 .097.078.175.175.175h13.65A.175.175 0 0 0 14 5.427V3.623a.175.175 0 0 0-.175-.175Z"/></g><defs><clipPath id="a4"><path fill="none" d="M0 .298h14v14.404H0z"/></clipPath></defs></svg>
+                <p class="text-black "><b>Коммерческая</b> в Barcelona <span class="text-[#8C8C8C]">(1232)</span></p>
+              </li>
+            </ul>
+
+            <a class="text-[#FF6B2A] text-sm gap-1 font-bold hover:underline flex items-center mt-6 after:block after:z-20 after:absolute after:inset-0 " href="#">Посмотреть больше в Аликанте <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="currentColor" d="m13.172 12-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414 4.95-4.95Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   
-  <script defer src="js/vendor.js"></script>
-  <script defer src="js/app.js"></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

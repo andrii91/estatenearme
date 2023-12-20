@@ -46,7 +46,7 @@ gulp.task('js_v', async function() {
             'src/js/vendor/slick.min.js',
         ])
         .pipe(concat('vendor.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
