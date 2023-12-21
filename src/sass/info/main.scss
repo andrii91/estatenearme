@@ -48,12 +48,41 @@
   box-shadow: 0px 4px 39px 0px rgba(55, 41, 41, 0.10);
 }
 
+.custom-shadow {
+  box-shadow: 0px 4px 39px 0px rgba(55, 41, 41, 0.10);
+}
+
+.custom-rounded {
+  border-radius: 100px 20px 20px 100px;
+}
+
+.before-custom-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(138, 138, 138, 0.10) 0%, rgba(0, 0, 0, 0.62) 100%);
+  z-index: 1; /* Ensure it's behind the main content */
+}
+
 .slick-slide {
+  padding: 35px 0;
+
   &:not(.slick-active) {
     opacity: .5;
     filter: grayscale(1);
   }
 }
+
+.slider-estate-small {
+  &.slick-slider {
+    position: static;
+  }
+}
+
+
 
 body {
   overflow-x: hidden;
