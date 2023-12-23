@@ -82,7 +82,27 @@
   }
 }
 
-
+.tabs-item > div {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #FFB391;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #FF6B2A;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #FF6B2A;
+  }
+}
 
 body {
   overflow-x: hidden;

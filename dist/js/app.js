@@ -46,7 +46,7 @@ $( document ).ready(function() {
     arrows: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 2,
+    slidesToShow: 1,
     centerMode: true,
     variableWidth: true,
   });
@@ -76,7 +76,115 @@ $( document ).ready(function() {
     </svg>
   </button>`,
   });
+
+
+  // map hover
+
+  $('[data-map]').each(function(){
+    const map = $(this);
+    let jsonData = map.data('map');
+
+    for (let index = 0; index < Object.keys(jsonData).length; index++) {
+      const element = Object.keys(jsonData)[index];
+
+      map.find('.map-legends').append(`
+        <li class="text-sm text-[#16171A]" data-map-id="${element}"><a class="link-${element}" href="${jsonData[element].filter_link}">${jsonData[element].name} <span class="text-[#B9B9B9]"> (${jsonData[element].info}) </span> </a> </li>
+      `)
+    }
+  })
+
+
+  $('[data-map-id]').hover(function(){
+    $('[data-map-id]').removeClass('!text-[#FF6B2A]')
+    $('[data-map-id] span').removeClass('!text-[#FFB391]')
+
+    const elMap = $(this).data('map-id');
+    $(`[data-map-id=${elMap}]`).addClass('!text-[#FF6B2A]');
+    $(`[data-map-id=${elMap}]`).find('span').addClass('!text-[#FFB391]');
+
+
+    let jsonData = $(this).parents('.tabs-item').data('map');
+    let parentId = $(this).parents('.tabs-item').attr('id');
+    let typeMap = $(`[href="#${parentId}"]`).text();
+
+    $(`#${parentId}`).append(`
+      <div id="tabs-map-info" class="map-info shadow bg-white p-3 absolute  w-36 rounded z-50">
+        <img src="${jsonData[elMap].icon}" class="w-4 mb-2" />
+
+        <h6 class="text-xs font-bold"> ${jsonData[elMap].name} </h6>
+        <p class="text-[8px]">
+          ${jsonData[elMap].info} ${typeMap}
+        </p>
+      </div>
+    `)
+
+    document.addEventListener("mousemove", moveBlock);
+  },
+  function(){
+    $('.map-info').remove();
+    $('[data-map-id]').removeClass('!text-[#FF6B2A]')
+    $('[data-map-id] span').removeClass('!text-[#FFB391]')
+    document.removeEventListener("mousemove", moveBlock);
+  })
+
+
+  $('[data-map-id]').click(function(e){
+    e.preventDefault();
+    const id = $(this).data('map-id');
+
+    document.location.href=$(`.link-${id}`).attr('href');
+  })
+
+  function moveBlock(event) {
+    let cursorBlock = document.getElementById("tabs-map-info");
+    
+    let mouseX = event.pageX + 8;
+    let mouseY = event.pageY + 8;
+
+    cursorBlock.style.left = mouseX + "px";
+    cursorBlock.style.top = mouseY + "px";
+  }
   
+
+  $('.tabs-list li a').click(function(e){
+    e.preventDefault();
+    $('.tabs-item').removeClass('!flex');
+    $('.tabs-list li a').removeClass('bg-white !text-[#FF6B2A]');
+    $(this).addClass('bg-white !text-[#FF6B2A]');
+
+    $($(this).attr('href')).addClass('!flex');
+  })
+
+  $('.slider-blog').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 5,
+    centerMode: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  $('.slider-blog-prev').click(function(){
+    $('.slider-blog').slick('slickPrev');
+  })
+  
+  $('.slider-blog-next').click(function(){
+    $('.slider-blog').slick('slickNext');
+  })
+       
 }) 
-
-
