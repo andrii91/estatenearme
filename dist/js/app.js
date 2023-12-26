@@ -45,11 +45,13 @@ $( document ).ready(function() {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 300,
+    speed: 1000,
     slidesToShow: 1,
     centerMode: true,
     variableWidth: true,
+    centerPadding: 0,
   });
+
 
   $('.prev').click(function(){
     $('.slider-estate').slick('slickPrev');
@@ -65,12 +67,12 @@ $( document ).ready(function() {
     speed: 300,
     slidesToShow: 3,
     variableWidth: true,
-    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition absolute top-48 lg:left-2 xl:-left-9 z-20 bg-white">
+    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition absolute top-48 -left-3.5 z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M11.5785 12.1072L16.5285 7.15719L15.1145 5.74319L8.75049 12.1072L15.1145 18.4712L16.5285 17.0572L11.5785 12.1072Z" fill="currentColor"></path>
     </svg>
   </button>`,
-    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition absolute top-48 right-2 z-20 bg-white">
+    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition absolute top-48 -right-3.5 z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.4215 12.1072L8.47152 7.15719L9.88551 5.74319L16.2495 12.1072L9.88551 18.4712L8.47151 17.0572L13.4215 12.1072Z" fill="currentColor"></path>
     </svg>
@@ -187,30 +189,37 @@ $( document ).ready(function() {
     $('.slider-blog').slick('slickNext');
   })
 
+  $('.tabmobile li').click(function(){
+    $('.tabmobile li').removeClass('bg-white shadow-xl')
+    $(this).addClass('bg-white shadow-xl');
+    $('.tabmobile-item').addClass('hidden');
+    $(`.${$(this).data('tab')}`).removeClass('hidden')
+  })
 
-  const containerWidth = $('.filter-banner-wrap').width();
-  const bannerWidth = $('.filter-banner').width();
 
-  $('.filter-banner').scroll(function() {
-    const scrollPosition = $(this).scrollLeft();
+  // const containerWidth = $('.filter-banner-wrap').width();
+  // const bannerWidth = $('.filter-banner').width();
 
-    if (Math.round(containerWidth - bannerWidth) === Math.round(scrollPosition)) {
-      $('.filter-banner-button').fadeOut();
-      $('.filter-banner').removeClass('before:block before:bg-gradient-to-r before:from-transparent before:to-[#1C1919] before:w-72 before:h-full before:absolute before:top-0 before:right-0')
-    } else {
-      $('.filter-banner-button').fadeIn();
-      $('.filter-banner').addClass('before:block before:bg-gradient-to-r before:from-transparent before:to-[#1C1919] before:w-72 before:h-full before:absolute before:top-0 before:right-0')
-    }
-  });
+  // $('.filter-banner').scroll(function() {
+  //   const scrollPosition = $(this).scrollLeft();
 
-  $('.filter-banner-button').click(function() {
-    const scrollContainer = $('.filter-banner');
-    const currentScroll = scrollContainer.scrollLeft();
-    const newScroll = currentScroll + bannerWidth/2;
+  //   if (Math.round(containerWidth - bannerWidth) === Math.round(scrollPosition)) {
+  //     $('.filter-banner-button').fadeOut();
+  //     $('.filter-banner').removeClass('before:block before:bg-gradient-to-r before:from-transparent before:to-[#1C1919] before:w-72 before:h-full before:absolute before:top-0 before:right-0')
+  //   } else {
+  //     $('.filter-banner-button').fadeIn();
+  //     $('.filter-banner').addClass('before:block before:bg-gradient-to-r before:from-transparent before:to-[#1C1919] before:w-72 before:h-full before:absolute before:top-0 before:right-0')
+  //   }
+  // });
 
-    scrollContainer.animate({ scrollLeft: newScroll }, 'slow');
-    return false;
-  });
+  // $('.filter-banner-button').click(function() {
+  //   const scrollContainer = $('.filter-banner');
+  //   const currentScroll = scrollContainer.scrollLeft();
+  //   const newScroll = currentScroll + bannerWidth/2;
+
+  //   scrollContainer.animate({ scrollLeft: newScroll }, 'slow');
+  //   return false;
+  // });
       
   
   $('.provinces-more').click(function(){

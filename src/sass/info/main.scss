@@ -45,7 +45,33 @@
 
 .estate-item {
   max-width: 586px;
+  margin: 0 auto; 
+  background: #fff;
   box-shadow: 0px 4px 39px 0px rgba(55, 41, 41, 0.10);
+}
+
+.slick-active {
+  .estate-item {
+    transition: .4s;
+  
+    &:hover {
+      transform: scale(1.05);
+      background: #fff;
+      z-index: 9;
+      box-shadow: 0px 4px 39px 0px rgba(55, 41, 41, 0.15);
+    }
+  }
+}
+
+.custom-hover {
+  transition: .4s;
+  
+  &:hover {
+    transform: scale(1.05);
+    background: #fff;
+    z-index: 9;
+    box-shadow: 0px 4px 39px 0px rgba(55, 41, 41, 0.15);
+  }
 }
 
 .custom-shadow {
@@ -79,7 +105,17 @@
 .slider-estate-small {
   &.slick-slider {
     position: static;
+    margin:0;
+    .slick-slide {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .estate-item {
+      box-shadow: 0px 4px 5px 0px rgba(55, 41, 41, 0.10);
+    }
   }
+
 }
 
 .tabs-item > div {
@@ -106,7 +142,8 @@
 
 .filter-banner {
   &::-webkit-scrollbar {
-    display: none;
+    width: 3px;
+    height: 3px;
   }
   
   /* Track */
