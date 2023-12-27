@@ -275,6 +275,20 @@ $( document ).ready(function() {
     $('.provinces-slider').slick('slickNext');
   })
 
+  // dropdown
+  $('.dropdown-label').click(function(e){
+    e.preventDefault();
+
+    $(this).parent().find('.dropdown-items').slideToggle(200);
+  })
+
+  $('.dropdown-item').click(function(e){
+    e.preventDefault();
+    $(this).parents('.dropdown').find('.dropdown-label span').text($(this).text())
+    $(this).parents('.dropdown').find('input').val($(this).data('value'))
+    $(this).parents('.dropdown').find('.dropdown-items').slideToggle(200);
+  })
+
 
 
 }) 
