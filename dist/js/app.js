@@ -13,22 +13,30 @@ $( document ).ready(function() {
 
   $('.fade-in-up').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInUp', 
-    offset: '0%'
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
   });
 
   $('.fade-in-down').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInDown', 
-    offset: '0%'
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
   });
   
   $('.fade-in-left, .provinces a:nth-child(odd)').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInLeft', 
-    offset: '0%'
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
   });
 
   $('.fade-in-right, .provinces a:nth-child(even)').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInRight', 
-    offset: '0%'
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
   });
 
   $('.lang-current').click(function(e){
@@ -50,8 +58,8 @@ $( document ).ready(function() {
   $('.radio-type-button').click(function(e){
     e.preventDefault();
 
-    $('.radio-type-button').removeClass('!bg-white !text-[#16171A]');
-    $(this).addClass('!bg-white !text-[#16171A]');
+    $('.radio-type-button').removeClass('!bg-white !text-primary_dark');
+    $(this).addClass('!bg-white !text-primary_dark');
 
     $('#radio-type').val($(this).data('radio'))
   })
@@ -59,8 +67,8 @@ $( document ).ready(function() {
   $('.checkbox-button').click(function(e){
     e.preventDefault();
 
-    $('.checkbox-button').removeClass('!border-[#FFB391]');
-    $(this).addClass('!border-[#FFB391]');
+    $('.checkbox-button').removeClass('!border-primary');
+    $(this).addClass('!border-primary');
 
     $('.checkbox-button svg').addClass('hidden');
     $(this).find('svg').removeClass('hidden');
@@ -102,12 +110,12 @@ $( document ).ready(function() {
     speed: 300,
     slidesToShow: 3,
     variableWidth: true,
-    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition absolute top-48 -left-3.5 z-20 bg-white">
+    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-48 -left-3.5 z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M11.5785 12.1072L16.5285 7.15719L15.1145 5.74319L8.75049 12.1072L15.1145 18.4712L16.5285 17.0572L11.5785 12.1072Z" fill="currentColor"></path>
     </svg>
   </button>`,
-    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-[#5E5E5E] hover:text-white hover:bg-[#FF6B2A] transition absolute top-48 -right-3.5 z-20 bg-white">
+    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-48 -right-3.5 z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.4215 12.1072L8.47152 7.15719L9.88551 5.74319L16.2495 12.1072L9.88551 18.4712L8.47151 17.0572L13.4215 12.1072Z" fill="currentColor"></path>
     </svg>
@@ -125,19 +133,19 @@ $( document ).ready(function() {
       const element = Object.keys(jsonData)[index];
 
       map.find('.map-legends').append(`
-        <li class="text-sm text-[#16171A]" data-map-id="${element}"><a class="link-${element}" href="${jsonData[element].filter_link}">${jsonData[element].name} <span class="text-[#B9B9B9]"> (${jsonData[element].info}) </span> </a> </li>
+        <li class="text-sm text-primary_dark" data-map-id="${element}"><a class="link-${element}" href="${jsonData[element].filter_link}">${jsonData[element].name} <span class="text-[#B9B9B9]"> (${jsonData[element].info}) </span> </a> </li>
       `)
     }
   })
 
 
   $('[data-map-id]').hover(function(){
-    $('[data-map-id]').removeClass('!text-[#FF6B2A]')
-    $('[data-map-id] span').removeClass('!text-[#FFB391]')
+    $('[data-map-id]').removeClass('!text-primary')
+    $('[data-map-id] span').removeClass('!text-primary')
 
     const elMap = $(this).data('map-id');
-    $(`[data-map-id=${elMap}]`).addClass('!text-[#FF6B2A]');
-    $(`[data-map-id=${elMap}]`).find('span').addClass('!text-[#FFB391]');
+    $(`[data-map-id=${elMap}]`).addClass('!text-primary');
+    $(`[data-map-id=${elMap}]`).find('span').addClass('!text-primary');
 
 
     let jsonData = $(this).parents('.tabs-item').data('map');
@@ -159,8 +167,8 @@ $( document ).ready(function() {
   },
   function(){
     $('.map-info').remove();
-    $('[data-map-id]').removeClass('!text-[#FF6B2A]')
-    $('[data-map-id] span').removeClass('!text-[#FFB391]')
+    $('[data-map-id]').removeClass('!text-primary')
+    $('[data-map-id] span').removeClass('!text-primary')
     document.removeEventListener("mousemove", moveBlock);
   })
 
@@ -186,8 +194,8 @@ $( document ).ready(function() {
   $('.tabs-list li a').click(function(e){
     e.preventDefault();
     $('.tabs-item').removeClass('!flex');
-    $('.tabs-list li a').removeClass('bg-white !text-[#FF6B2A]');
-    $(this).addClass('bg-white !text-[#FF6B2A]');
+    $('.tabs-list li a').removeClass('bg-white !text-primary');
+    $(this).addClass('bg-white !text-primary');
 
     $($(this).attr('href')).addClass('!flex');
   })
@@ -253,9 +261,6 @@ $( document ).ready(function() {
     }
   })
 
-  $('.provinces-slider').append($('.provinces').html());
-  $('.provinces-slider a').removeClass('!hidden');
-
   $('.provinces-slider').slick({
     rows: 3,
     dots: false,
@@ -278,7 +283,7 @@ $( document ).ready(function() {
   // dropdown
   $('.dropdown-label').click(function(e){
     e.preventDefault();
-
+    $(this).parents('.dropdown').toggleClass('open')
     $(this).parent().find('.dropdown-items').slideToggle(200);
   })
 
@@ -287,8 +292,79 @@ $( document ).ready(function() {
     $(this).parents('.dropdown').find('.dropdown-label span').text($(this).text())
     $(this).parents('.dropdown').find('input').val($(this).data('value'))
     $(this).parents('.dropdown').find('.dropdown-items').slideToggle(200);
+    
   })
 
+  $(document).mouseup( function(e){ 
+    var div = $( ".dropdown" ); 
+    if ( !div.is(e.target) 
+        && div.has(e.target).length === 0 ) {
+          div.removeClass('open')
+          div.find('.dropdown-items').slideUp(200);
+    }
+  });
+
+  let filterCount = $('.filter-check-button.active').length;
+  $('.filter-btn-open').click(function(e){
+    e.preventDefault();
+
+    $('.filter').slideToggle(200);
+   
+  })
+
+  $('.filter-check-button').click(function(e){
+    e.preventDefault();
 
 
+    $(this).toggleClass('!bg-primary !text-white active')
+    $(this).find('svg').toggleClass('!bg-primary !text-white')
+
+    filterCount = $('.filter-check-button.active').length;
+    if(filterCount > 0) {
+      $('.filter-btn-open span').text(` (${filterCount})`)
+    }
+  });
+
+  $('.provinces-slider-large').slick({
+    rows: 2,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    variableWidth: true,
+    centerMode: true,
+    lazyLoad: 'ondemand',
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 5
+        }
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          centerMode: false,
+          variableWidth: false,
+          slidesToShow: 2
+        }
+      }
+    ]
+  });
+
+  $('.provinces-slider-large-prev').click(function(){
+    $('.provinces-slider-large').slick('slickPrev');
+  })
+  
+  $('.provinces-slider-large-next').click(function(){
+    $('.provinces-slider-large').slick('slickNext');
+  })
 }) 
