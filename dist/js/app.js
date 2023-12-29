@@ -459,4 +459,178 @@ $( document ).ready(function() {
       });
   })
 
+
+    // Handle click on menu links
+    $('.menu-single-page a').on('click', function (e) {
+      e.preventDefault();
+
+      var targetId = $(this).attr('href');
+      var targetPosition = $(targetId).offset().top - 120;
+
+      $('html, body').animate({
+          scrollTop: targetPosition
+      }, 500);
+  });
+
+  // Highlight menu item on scroll
+  $(document).on('scroll', function () {
+      var currentPosition = $(this).scrollTop();
+
+      // Loop through each section to find the one in view
+      $('.section').each(function () {
+          var sectionTop = $(this).offset().top - 50; // Adjusted for better highlighting
+
+          if (currentPosition >= sectionTop) {
+              var sectionId = $(this).attr('id');
+              $('.menu-single-page a').removeClass('bg-white');
+              $('.menu-single-page a[href="#' + sectionId + '"]').addClass('bg-white');
+          }
+      });
+  });
+
+  $('.show-more').click(function(e){
+    e.preventDefault()
+    $(this).parent().find('.hidden').addClass('flex').removeClass('hidden');
+    $(this).addClass('hidden')
+  })
+
+
+
+  $('.plans-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 -left-5 lg:-left-[63px] z-20 bg-white">
+    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.5785 12.1072L16.5285 7.15719L15.1145 5.74319L8.75049 12.1072L15.1145 18.4712L16.5285 17.0572L11.5785 12.1072Z" fill="currentColor"></path>
+    </svg>
+  </button>`,
+    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 -right-5 lg:-right-[63px] z-20 bg-white">
+    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13.4215 12.1072L8.47152 7.15719L9.88551 5.74319L16.2495 12.1072L9.88551 18.4712L8.47151 17.0572L13.4215 12.1072Z" fill="currentColor"></path>
+    </svg>
+  </button>`,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+
+
+  var options_1 = {
+    series: [{
+    name: 'Средняя цена за м²',
+    data: [31, 40, 28, 51, 42, 109, 100]
+  }, {
+    name: 'Средняя цена за м²<br> в Альфас дель Пи',
+    data: [11, 32, 45, 32, 34, 52, 41]
+  },
+  {
+    name: 'Средняя цена за м² <br> в провинции Barcelona',
+    data: [23, 34, 55, 32, 77, 99, 41]
+  }],
+    chart: {
+    height: 350,
+    type: 'area'
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  xaxis: {
+    type: 'datetime',
+    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+  },
+  tooltip: {
+    x: {
+      format: 'dd/MM/yy HH:mm'
+    },
+  },
+  };
+
+  var options_2 = {
+    series: [{
+    name: 'Средняя цена за м²',
+    data: [0, 40, 33, 11, 42, 22, 100]
+  }, {
+    name: 'Средняя цена за м²<br> в Альфас дель Пи',
+    data: [11, 32, 45, 32, 34, 52, 41]
+  },
+  {
+    name: 'Средняя цена за м² <br> в провинции Barcelona',
+    data: [23, 34, 55, 32, 77, 99, 41]
+  }],
+    chart: {
+    height: 350,
+    type: 'area'
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'smooth'
+  },
+  xaxis: {
+    type: 'datetime',
+    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+  },
+  tooltip: {
+    x: {
+      format: 'dd/MM/yy HH:mm'
+    },
+  },
+  };
+
+  var chart_1 = new ApexCharts(document.querySelector("#chart_1"), options_1);
+  chart_1.render();
+
+  var chart_2 = new ApexCharts(document.querySelector("#chart_2"), options_2);
+  chart_2.render();
+
+
+  $('.tabs-main li a').click(function(e){
+    e.preventDefault();
+
+    $('.tabs-main li a').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tabs-main-item').removeClass('active');
+    $(`${$(this).attr('href')}`).addClass('active');
+
+  })
+
+
+  var map = L.map('map').setView([51.505, -0.09], 13);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+  var greenIcon = L.icon({
+      iconUrl: 'images/place.webp',
+      iconSize:     [36, 36], // size of the icon
+  });
+
+  L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+
+
+  $('.rating svg').click(function(){
+    const clickedIndex = $(this).index();
+    $('.rating svg').removeClass('!text-primary');
+    $('.rating svg:lt(' + (clickedIndex + 1) + ')').addClass('!text-primary');
+  })
+
+  
 }) 
