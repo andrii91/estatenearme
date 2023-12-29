@@ -366,5 +366,15 @@ $( document ).ready(function() {
   
   $('.provinces-slider-large-next').click(function(){
     $('.provinces-slider-large').slick('slickNext');
+  });
+
+
+  $('.tooltip').hover(function(){
+    $(this).append(`
+      <span class="tooltip-item">${$(this).data('tooltip')}</span>
+    `)
+  },
+  function(){
+    $('.tooltip-item').remove();
   })
 }) 

@@ -467,6 +467,36 @@
   }
 }
 
+.tooltip {
+  position: relative;
+
+  &-item {
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 9.058px;
+    background: rgba(0, 0, 0, 0.90);
+    padding: 10px 12px;
+    white-space: nowrap;
+
+    &:before {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='13' viewBox='0 0 25 13' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.9248 0.69629L0.536133 0.696289L12.7305 12.8906L24.9248 0.69629Z' fill='black' fill-opacity='0.9'/%3E%3C/svg%3E");
+      width: 24.389px;
+      height: 12px;
+      position: absolute;
+      bottom: -11px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 body {
   overflow-x: hidden;
   font-family: Manrope, sans-serif;
