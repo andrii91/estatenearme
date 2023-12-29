@@ -377,4 +377,86 @@ $( document ).ready(function() {
   function(){
     $('.tooltip-item').remove();
   })
+
+  $('.toggle-share-menu').click(function(){
+    $('#share-menu').slideToggle(200)
+  })
+
+
+   // Функція для генерації посилання на Twitter
+   $('.shareOnTwitter').click(function(e) {
+    e.preventDefault();
+      // URL Twitter
+      var twitterUrl = 'https://twitter.com/intent/tweet';
+      
+      // Параметри для Twitter
+      var tweetText = $(this).data('tweetText');
+      var hashtags = $(this).data('hashtags');
+      var url = $(this).data('url');
+      
+      // Побудова Twitter URL з параметрами
+      var fullUrl = `${twitterUrl}?text=${encodeURIComponent(tweetText)}&hashtags=${encodeURIComponent(hashtags)}&url=${encodeURIComponent(url)}`;
+      
+      // Відкриваємо посилання в новому вікні (можна використовувати window.location для переходу)
+      window.open(fullUrl, '_blank');
+  })
+
+  // Функція для генерації посилання на Facebook
+  $('.shareOnFacebook').click(function(e) {
+    e.preventDefault();
+    // URL Facebook
+      var facebookUrl = 'https://www.facebook.com/sharer/sharer.php';
+      
+      // Параметри для Facebook
+      var url = $(this).data('url');
+      
+      // Побудова Facebook URL з параметрами
+      var fullUrl = `${facebookUrl}?u=${encodeURIComponent(url)}`;
+      
+      // Відкриваємо посилання в новому вікні (можна використовувати window.location для переходу)
+      window.open(fullUrl, '_blank');
+  })
+
+  // Функція для генерації посилання на WhatsApp
+  $('.shareOnWhatsApp').click(function(e) {
+
+    e.preventDefault();
+    // URL WhatsApp
+      var whatsappUrl = 'https://api.whatsapp.com/send';
+      
+      // Параметри для WhatsApp
+      var text = $(this).data('text');
+      var url = $(this).data('url');
+      
+      // Побудова WhatsApp URL з параметрами
+      var fullUrl = `${whatsappUrl}?text=${encodeURIComponent(`${text} ${url}`)}`;
+      
+      // Відкриваємо посилання в новому вікні (можна використовувати window.location для переходу)
+      window.open(fullUrl, '_blank');
+  })
+
+  $('.sendEmail').click(function(e) {
+    e.preventDefault();
+
+    const emailSubject = encodeURIComponent($(this).data('subject'));
+    const emailBody = encodeURIComponent($(this).data('body'));
+    const emailUrl = `mailto:?subject=${emailSubject}&body=${emailBody}`;
+    window.location.href = emailUrl;
+  })
+
+  $('.copyLink').click(function(e) {
+    e.preventDefault();
+
+      const linkToCopy = $(this).data('url');
+      navigator.clipboard.writeText(linkToCopy).then(() => {
+          $(this).html(`
+          <svg class="h-4 w-4 text-green-500">
+            <use xlink:href="#outline-check"></use>
+          </svg>
+          `)
+      }).catch(err => {
+          console.error('Unable to copy link', err);
+      });
+  })
+
 }) 

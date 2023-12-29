@@ -497,6 +497,30 @@
   }
 }
 
+.btn-shadow-new {
+  box-shadow: 0px 3px 9.2px 0px #E9EAEE;
+
+  &:hover {
+    box-shadow: 0px 5px 11px 0px rgba(255, 128, 72, 0.20);
+  }
+}
+
+#share-menu {
+  box-shadow: 0px 14px 54px 0px rgba(0, 0, 0, 0.35);
+
+  &:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.97581 4.59553C0.590746 6.31655 0.590745 9.10686 1.97581 10.8279L4.63548 14.1326C6.02054 15.8537 8.26618 15.8537 9.65124 14.1326L12.3109 10.8279C13.696 9.10686 13.696 6.31655 12.3109 4.59553L9.65124 1.29076C8.26618 -0.430253 6.02054 -0.430254 4.63548 1.29076L1.97581 4.59553Z' fill='white'/%3E%3C/svg%3E%0A");
+    width: 14px;
+    height: 16px;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+  }
+}
+
 body {
   overflow-x: hidden;
   font-family: Manrope, sans-serif;
