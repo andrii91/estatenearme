@@ -719,4 +719,30 @@ $( document ).ready(function() {
     }
   })
 
+
+  $('#avatar').on('change', function(){
+    readURL(this, $('#avatar-img'));  //Change the image
+  });
+  
+  //FILE
+  function readURL(input, obj){
+    if(input.files && input.files[0]){
+      var reader = new FileReader();
+      reader.onload = function(e){
+        console.log(e.target)
+        obj.html(`
+          <img class="w-full h-full object-cover rounded-full" src="${e.target.result}" />
+        `)
+
+        
+        $('#url').html(`
+          <svg class="h-4 w-4 "><use xlink:href="#upload"></use></svg>
+          ${input.files[0].name}
+        `)
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  };
+
 }) 

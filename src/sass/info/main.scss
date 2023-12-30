@@ -638,6 +638,15 @@ select {
   background-position: 98% center;
 }
 
+.profile-bg {
+  background: linear-gradient(180deg, rgba(243, 244, 245, 0.00) 20.25%, #F3F4F5 100%);
+}
+
+.custom-file-upload {
+  border-radius: 10px;
+  border: 1px solid  #5E5E5E;
+}
+
 body {
   overflow-x: hidden;
   font-family: Manrope, sans-serif;
