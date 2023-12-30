@@ -108,6 +108,13 @@
   }
 }
 
+.city-slider {
+  .slick-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 .slider-estate-small {
   &.slick-slider {
     position: static;
