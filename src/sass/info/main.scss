@@ -521,6 +521,21 @@
   }
 }
 
+
+.fixed-tooltip-content {
+  position: relative;
+  &:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='24' viewBox='0 0 17 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.32113 8.50317C0.058321 10.3158 0.0583213 13.2546 1.32113 15.0673L5.99487 21.7759C7.25768 23.5885 9.3051 23.5885 10.5679 21.7759L15.2417 15.0673C16.5045 13.2546 16.5045 10.3158 15.2417 8.50317L10.5679 1.79453C9.3051 -0.0180977 7.25768 -0.0180973 5.99487 1.79453L1.32113 8.50317Z' fill='%23FFE9DF'/%3E%3C/svg%3E%0A");
+    width: 14px;
+    height: 16px;
+    position: absolute;
+    top: -7px;
+    right: 59px;
+    z-index: 99;
+  }
+}
+
 .plans-slider {
   button {
     opacity: 0;
@@ -561,28 +576,25 @@
 #map { min-height: 442px; width: 100%; z-index: 1;}
 
 .custom-textarea {
-  .ck-editor__top {
-    padding: 10px 0;
-    border-radius: 6px 6px 0px 0px;
-    border: 1px solid #E4E7EA;
-    background: #FFF;
-    border-bottom: 0;
+  .ck-toolbar {
+    border-radius: 6px 6px 0  0 !important;
+    border: 1px solid #E4E7EA !important;
+    border-bottom: 0 !important;
+    padding: 6px 0 !important;
   }
-  .ck-editor__main {
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+  .ck.ck-editor__main>.ck-editor__editable {
+    border-radius: 0 0 6px 6px;
     border: 1px solid #E4E7EA;
-    background: var(--input-bg, #F3F4F5);
-    padding: 16px 20px;
+    background: #F3F4F5;
+    padding: 0 20px;
     min-height: 187px;
+  }
 
-    .ck-placeholder {
-      color: #818181;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; /* 19.6px */
-    }
+}
+
+.object-slider {
+  .slick-slide {
+    padding-bottom: 65px;
   }
 }
 

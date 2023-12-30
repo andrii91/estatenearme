@@ -2,4 +2,12 @@
 
 @media #{$tabletLandscape} {
   @import '../desktop';
+
+  & {
+    main {
+        overflow: hidden;
+    }
+  }
+   
 } 
+

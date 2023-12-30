@@ -632,5 +632,62 @@ $( document ).ready(function() {
     $('.rating svg:lt(' + (clickedIndex + 1) + ')').addClass('!text-primary');
   })
 
+
+  $('.more-answers').click(function(e){
+    e.preventDefault();
+    $(this).parents('.answers-parent').find('.answers').slideToggle(200);
+  })
+
+  $('.fixed-tooltip').click(function(e){
+    e.preventDefault();
+    $this = $(this);
+
+    if(!$this.hasClass('active')) {
+      $('.fixed-tooltip-content').slideDown(0);
+      $this.css({'transform': `translateY(-${$('.fixed-tooltip-content').height()+15}px)`})
+    }else{
+      $('.fixed-tooltip-content').slideUp(0);
+      $this.css({'transform': `translateY(0)`})
+    }
+
+    $this.toggleClass('active')
+  })
   
+
+  $('.object-slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+    centerMode: true,
+    lazyLoad: 'ondemand',
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          variableWidth: false,
+          centerMode: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  $('.object-slider-prev').click(function(){
+    $('.object-slider').slick('slickPrev');
+  })
+  
+  $('.object-slider-next').click(function(){
+    $('.object-slider').slick('slickNext');
+  });
+
 }) 
