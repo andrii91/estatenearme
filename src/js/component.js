@@ -595,11 +595,15 @@ $( document ).ready(function() {
   },
   };
 
-  var chart_1 = new ApexCharts(document.querySelector("#chart_1"), options_1);
-  chart_1.render();
+  if($('div').hasClass('chart')) {
+    var chart_1 = new ApexCharts(document.querySelector("#chart_1"), options_1);
+    chart_1.render();
+  
+    var chart_2 = new ApexCharts(document.querySelector("#chart_2"), options_2);
+    chart_2.render();
+  }
 
-  var chart_2 = new ApexCharts(document.querySelector("#chart_2"), options_2);
-  chart_2.render();
+
 
 
   $('.tabs-main li a').click(function(e){
@@ -613,17 +617,19 @@ $( document ).ready(function() {
 
   })
 
-
-  var map = L.map('map').setView([51.505, -0.09], 13);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-  var greenIcon = L.icon({
-      iconUrl: 'images/place.webp',
-      iconSize:     [36, 36], // size of the icon
-  });
-
-  L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+  if($('div').hasClass('map')) {
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var greenIcon = L.icon({
+        iconUrl: 'images/place.webp',
+        iconSize:     [36, 36], // size of the icon
+    });
+  
+    L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
+  
+  }
 
 
   $('.rating svg').click(function(){
@@ -689,5 +695,28 @@ $( document ).ready(function() {
   $('.object-slider-next').click(function(){
     $('.object-slider').slick('slickNext');
   });
+
+
+  $('.province-item-more').click(function(){
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active');
+
+      $('.province-item').each(function(index) {
+        if(index > 5){
+          $(this).addClass('!hidden');
+        }
+      })
+    }else{
+      $('.province-item').removeClass('!hidden');
+      $(this).addClass('active');
+    }
+  })
+
+  $('.province-item').each(function(index) {
+    if(index > 5){
+      $(this).addClass('!hidden');
+      $(this).parents('section').find('.province-item-more').removeClass('!hidden')
+    }
+  })
 
 }) 

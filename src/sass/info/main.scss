@@ -172,7 +172,7 @@
   box-shadow: 0px 4px 39px 0px rgba(55, 41, 41, 0.10);
 }
 
-.provinces-more {
+.provinces-more, .province-item-more {
   &.active {
     svg {
       transform: rotate(180deg);
@@ -596,6 +596,10 @@
   .slick-slide {
     padding-bottom: 65px;
   }
+}
+
+.small-shadow-province {
+  box-shadow: 0px 2px 5px 0px rgba(55, 41, 41, 0.10);
 }
 
 body {
