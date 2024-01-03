@@ -2,4 +2,22 @@
     main {
         overflow: hidden;
     }
+  .provinces-slider-large {
+    .slick-slide {
+      margin-right: 4px;
+      margin-left: 4px;
+
+      >div:first-child {
+        margin-bottom: 8px;
+      }
+
+      &.slick-slide {
+        padding: 16px 0;
+      }
+
+      .block-shadow-gray {
+        box-shadow: 0 4px 10px 0 rgba(55,41,41,.1);
+      }
+    }
+  }
 }

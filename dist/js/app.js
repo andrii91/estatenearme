@@ -787,4 +787,7 @@ $( document ).ready(function() {
     $(this).addClass('!text-primary')
   })
 
+  $(window).scroll(function () {
+    return $('.nav-mob').toggleClass("z-40", $(window).scrollTop() > 0);
+  });
 }) 
