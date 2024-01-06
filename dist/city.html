@@ -1874,46 +1874,47 @@
       </div>
     </div>
   </nav>
-
-  <header class="pt-28 pb-20">
-    <div class="mx-auto  max-w-[1482px]">
-      <div class="rounded-2xl md:rounded-[40px] aspect-square lg:aspect-[1482/515] overflow-hidden relative flex flex-col items-center justify-center py-32 before-custom-gradient before-custom-gradient-listing fade-in-up">
-        <img class="absolute w-full h-full inset-0 rounded-2xl lg:rounded-[40px] aspect-square md:aspect-[1482/515]  object-cover fade-in-up" src="images/city-bg.webp" alt="">
+  <header class="lg:pt-28 lg:pb-20">
+    <div class="mx-auto md:px-4 max-w-[1482px]">
+      <div class="md:rounded-[40px] aspect-square lg:aspect-[1482/515] overflow-hidden relative flex flex-col items-center justify-center py-32 before-custom-gradient fade-in-up">
+        <img class="absolute w-full h-full inset-0 lg:rounded-[40px] aspect-square md:aspect-[1482/515]  object-cover fade-in-up" src="images/city-bg.webp" alt="">
         <div class="max-w-[1144px] text-center px-2 relative z-20">
-          <div class="flex items-center justify-center gap-2 mb-6">
+          <div class="hidden lg:flex items-center justify-center gap-2 mb-6">
             <button class="flex items-center px-6 py-5 gap-2.5 border border-white text-base font-bold text-white rounded-md leading-none hover:border-primary_dark hover:bg-primary_dark hover:text-white transition duration-300">Количество обьектов: 1002</button>
             <button class="flex items-center px-6 py-5 gap-2.5 border border-white text-base font-bold text-white rounded-md leading-none hover:border-primary_dark hover:bg-primary_dark hover:text-white transition duration-300">Средняя цена: 100 255 € </button>
           </div>
-          <h1 class="text-white text-xl sm:text-4xl xl:text-6xl font-[Gilroy] font-semibold	fade-in-up mb-2">Недвижимость на продажу и в аренду  в Benitachell (Ciudad) </h1>
-          <p class="lg:text-xl text-white inline-block font-medium fade-in-up mb-14">Недвижимость в Benitachell, а также дома, квартиры, земля, новостройки в провинции</p>
+          <h1 class="text-white text-lg sm:text-4xl xl:text-6xl font-[Gilroy] font-semibold	fade-in-up mb-2">Недвижимость на продажу и в аренду  в Benitachell (Ciudad) </h1>
+          <p class="lg:text-xl text-sm text-white inline-block font-medium fade-in-up mb-16">Недвижимость в Benitachell, а также дома, квартиры, земля, новостройки в провинции</p>
         </div>
       </div>
     </div>
     <div class="mx-auto md:px-4 max-w-[1232px] relative z-20 fade-in-up">
       <form action="#" class="flex flex-col w-full -mt-[65px] md:-mt-[119px] px-2 md:px-0">
-        <div class="flex items-start flex-wrap flex-auto md:flex-nowrap w-auto rounded-t-2xl overflow-hidden">
-          <button data-radio="Апартаменты" class="radio-type-button bg-primary_dark !bg-white !text-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark">Апартаменты</button>
-          <button data-radio="Дуплексы" class="radio-type-button bg-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark">Дуплексы</button>
-          <button data-radio="Цокальный этаж" class="radio-type-button bg-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark">Цокальный этаж</button>
-          <button data-radio="Пентхаус" class="radio-type-button bg-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark md:rounded-tr-2xl">Пентхаус</button>
+        <div class="flex items-start flex-nowrap flex-auto w-auto rounded-t-2xl overflow-x-auto lg:overflow-hidden">
+          <button data-radio="Апартаменты" class="radio-type-button whitespace-nowrap bg-primary_dark !bg-white !text-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark">Апартаменты</button>
+          <button data-radio="Дуплексы" class="radio-type-button whitespace-nowrap bg-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark">Дуплексы</button>
+          <button data-radio="Цокальный этаж" class="radio-type-button whitespace-nowrap bg-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark">Цокальный этаж</button>
+          <button data-radio="Пентхаус" class="radio-type-button whitespace-nowrap bg-primary_dark flex-auto md:flex-none text-sm font-medium text-white py-3.5 px-6 hover:bg-white transition duration-300	 hover:text-primary_dark md:rounded-tr-2xl">Пентхаус</button>
 
           <input id="radio-type" type="hidden" name="type" value="Апартаменты">
         </div>
-        <div class="bg-white px-6 py-8 rounded-b-2xl md:rounded-tr-2xl shadow-2xl relative">
-          <div class="flex flex-wrap lg:flex-nowrap mb-5 items-center gap-4 mb-5">
-            <button data-checkbox="Продажа" class="checkbox-button text-sm rounded-xl shadow border border-transparent !border-primary text-primary_dark py-3.5 px-6 flex items-center gap-2.5"> 
-              Продажа
-              <svg class="icon text-primary h-4 w-4">
-                <use xlink:href="#outline-check"></use>
-              </svg>
-            </button>
-            <button data-checkbox="Аренда" class="checkbox-button text-sm rounded-xl shadow border border-transparent text-primary_dark py-3.5 px-6 flex items-center gap-2.5"> 
-              Аренда
-              <svg class="icon text-primary h-4 w-4 hidden">
-                <use xlink:href="#outline-check"></use>
-              </svg>
-            </button>
-            <input id="#checkbox-type" type="hidden" name="" value="Продажа">
+        <div class="bg-white px-2 lg:px-6 py-8 rounded-b-2xl md:rounded-tr-2xl shadow lg:shadow-2xl relative">
+          <div class="flex flex-wrap lg:flex-nowrap mb-5 items-center gap-2 lg:gap-4">
+            <div class="flex lg:flex-wrap flex-nowrap w-full lg:w-auto  items-center gap-2 lg:gap-4">
+              <button data-checkbox="Продажа" class="checkbox-button text-sm rounded-xl shadow border border-transparent !border-primary text-primary_dark py-3.5 px-6 flex items-center gap-2.5"> 
+                Продажа
+                <svg class="icon text-primary h-4 w-4">
+                  <use xlink:href="#outline-check"></use>
+                </svg>
+              </button>
+              <button data-checkbox="Аренда" class="checkbox-button text-sm rounded-xl shadow border border-transparent text-primary_dark py-3.5 px-6 flex items-center gap-2.5"> 
+                Аренда
+                <svg class="icon text-primary h-4 w-4 hidden">
+                  <use xlink:href="#outline-check"></use>
+                </svg>
+              </button>
+              <input id="#checkbox-type" type="hidden" name="" value="Продажа">
+            </div>
             <div class="flex-auto relative">
               <input type="text" name="search" class="search-input py-3.5 pr-6 bg-primary_gray_light rounded-xl w-full text-sm text-primary_dark pl-14 placeholder:text-primary_dark" placeholder="Название, город, комплекс">
               <div class="search-input-helps hidden gap-1 px-3 py-3.5 absolute top-full z-10 bg-white w-full shadow-xl rounded-2xl">
@@ -1947,17 +1948,15 @@
                 </a>
               </div>
             </div>
-            <button type="submit" class="bg-primary rounded-xl gap-3 text-sm font-bold px-6 py-3.5 flex items-center text-white hover:bg-primary_hover shadow-lg shadow-[rgba(255, 128, 72, 0.20)] transition duration-300	">
+            <button type="submit" class="bg-primary rounded-xl gap-3 text-sm font-bold px-4 lg:px-6 py-3.5 flex items-center text-white hover:bg-primary_hover shadow-lg shadow-[rgba(255, 128, 72, 0.20)] transition duration-300	">
               <svg class="h-6 w-6">
                 <use xlink:href="#search"></use>
               </svg>
-              Поиск (1002) 
+             <span class="hidden lg:inline"> Поиск</span> 
             </button>
           </div>
-
           <p class="text-sm text-primary_gray font-medium">Найдите все виды жилья, сообществ, домов, недавно построенных квартир, на планах или работах, выполненных отечественными разработчиками</p>
-
-         
+          
         </div>
       </form>
     </div>
@@ -1966,8 +1965,8 @@
   <main class="overflow-hidden">
     <section class="py-10 lg:py-20 bg-provinces">
       <div class="mx-auto px-4 max-w-[1232px]">
-        <h2 class="font-bold text-4xl	pb-6 mb-6 after:w-20 after:block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[5px] after:rounded-md after:bg-primary relative text-center">Список районов и кварталов этого города</h2>
-        <p class="text-lg text-primary_gray font-medium mb-5 lg:mb-14 text-center  full-visible">Выберите интересующий вас район и просмотрите доступные квартиры, дома, земельные участки или новостройки</p>
+        <h2 class="font-bold lg:text-4xl text-lg	pb-6 mb-6 after:w-20 after:block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[5px] after:rounded-md after:bg-primary relative text-center">Список районов и кварталов этого города</h2>
+        <p class="text-base lg:text-lg text-primary_gray font-medium mb-5 lg:mb-14 text-center  full-visible">Выберите интересующий вас район и просмотрите доступные квартиры, дома, земельные участки или новостройки</p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-2">
           <a href="#" class="small-shadow-province transition hover:scale-[1.05] rounded-md bg-white text-sm px-4 py-2.5 text-primary_dark font-bold"> Alicante / Alacant <span class="font-light text-primary_gray">(304)</span></a>
@@ -2177,8 +2176,8 @@
 
     <section class="py-10 lg:py-24 bg-[#F5F6F5]">
       <div class="mx-auto px-4 max-w-[1232px]">
-        <h2 class="font-bold text-4xl	pb-6 mb-6 after:w-20 after:block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[5px] after:rounded-md after:bg-primary relative text-center">Категории недвижимости, которые вы найдете на этом портале</h2>
-        <p class="text-lg text-primary_gray font-medium mb-5 lg:mb-14 text-center fade-in-up">Выберите тип дома, земли или коммерческого помещения и найдите полный поиск</p>
+        <h2 class="font-bold lg:text-4xl text-lg	pb-6 mb-6 after:w-20 after:block after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[5px] after:rounded-md after:bg-primary relative text-center">Категории недвижимости, которые вы найдете на этом портале</h2>
+        <p class="text-base lg:text-lg text-primary_gray font-medium mb-5 lg:mb-14 text-center fade-in-up">Выберите тип дома, земли или коммерческого помещения и найдите полный поиск</p>
 
         <div class="flex flex-wrap items-start justify-center gap-x-6 gap-y-8">
           <div class="max-w-[384px] w-full fade-in-up flex items-center relative p-1.5 bg-white custom-hover custom-shadow gap-5 custom-rounded border border-transparent group hover:border-[#DBDBDB] transition duration-300 full-visible">
@@ -2237,7 +2236,7 @@
 
     <section class="py-10 lg:py-24">
       <div class="mx-auto px-4 max-w-[1232px]">
-        <h2 class="mb-8 font-bold text-4xl text-center">Análisis del Mercado de Obra Nueva en la Provincia de Alicante</h2>
+        <h2 class="mb-8 font-bold lg:text-4xl text-lg text-center">Análisis del Mercado de Obra Nueva en la Provincia de Alicante</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="flex flex-col gap-4">
             <p>La provincia de Alicante, ubicada en la Comunidad Valenciana de España, es un lugar atractivo para la inversión inmobiliaria, especialmente en el mercado de obra nu</p>

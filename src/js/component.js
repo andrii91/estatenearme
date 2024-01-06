@@ -478,7 +478,7 @@ $( document ).ready(function() {
 
       // Loop through each section to find the one in view
       $('.section').each(function () {
-          var sectionTop = $(this).offset().top - 50; // Adjusted for better highlighting
+          var sectionTop = $(this).offset().top - 150; // Adjusted for better highlighting
 
           if (currentPosition >= sectionTop) {
               var sectionId = $(this).attr('id');
