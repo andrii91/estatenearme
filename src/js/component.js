@@ -474,18 +474,24 @@ $( document ).ready(function() {
 
   // Highlight menu item on scroll
   $(document).on('scroll', function () {
-      var currentPosition = $(this).scrollTop();
+    var currentPosition = $(this).scrollTop();
 
-      // Loop through each section to find the one in view
-      $('.section').each(function () {
-          var sectionTop = $(this).offset().top - 150; // Adjusted for better highlighting
+    // Loop through each section to find the one in view
+    $('.section').each(function () {
+        var sectionTop = $(this).offset().top - 150; // Adjusted for better highlighting
 
-          if (currentPosition >= sectionTop) {
-              var sectionId = $(this).attr('id');
-              $('.menu-single-page a').removeClass('bg-white');
-              $('.menu-single-page a[href="#' + sectionId + '"]').addClass('bg-white');
-          }
-      });
+        if (currentPosition >= sectionTop) {
+            var sectionId = $(this).attr('id');
+            var $activeLink = $('.menu-single-page a[href="#' + sectionId + '"]');
+
+            $('.menu-single-page a').removeClass('bg-white');
+            $activeLink.addClass('bg-white');
+
+            // Scroll to the left to make the active link visible
+            var scrollLeftMenu = $activeLink.offset().left - 20;
+            $('.menu-single-page').scrollLeft(scrollLeftMenu);
+        }
+    });
   });
 
   $('.show-more').click(function(e){
@@ -678,7 +684,7 @@ $( document ).ready(function() {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           variableWidth: false,
           centerMode: false,
