@@ -20,4 +20,20 @@
       }
     }
   }
+
+  .fixed-tooltip-content:before {
+    right: 36px;
+  }
+
+  .plans-slider button {
+    opacity: 1;
+  }
+
+  .fixed-tooltip {
+    bottom: 90px;
+
+    &.active {
+      bottom: 16px;
+    }
+  }
 }

@@ -11,6 +11,18 @@ observer.observe();
 
 $( document ).ready(function() {
 
+  function isMobile() {
+    // Перевірка ширини екрана
+    var windowWidth = $(window).width();
+  
+    // Інші можливі умови для визначення мобільного телефона
+    var isTouchDevice = 'ontouchstart' in document.documentElement;
+    var isSmallScreen = windowWidth < 768; // Наприклад, визначити маленький екран як ширину менше 768 пікселів
+  
+    // Повернути true, якщо виконується хоча б одна умова
+    return isTouchDevice || isSmallScreen;
+  }
+
   $('.fade-in-up').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInUp', 
     offset: '0%',
@@ -54,6 +66,13 @@ $( document ).ready(function() {
   $('.show-submenu').click(function(){
     $(this).toggleClass('active')
   })
+
+  $('.show-account-menu').click(function(e){
+    e.preventDefault();
+    $('.account-menu').slideToggle(200).toggleClass('open');
+  })
+
+  
 
   $('.radio-type-button').click(function(e){
     e.preventDefault();
@@ -292,7 +311,8 @@ $( document ).ready(function() {
     $(this).parents('.dropdown').find('.dropdown-label span').text($(this).text())
     $(this).parents('.dropdown').find('input').val($(this).data('value'))
     $(this).parents('.dropdown').find('.dropdown-items').slideToggle(200);
-    
+    $('.dropdown-portal').remove();
+
   })
 
   $(document).mouseup( function(e){ 
@@ -301,8 +321,61 @@ $( document ).ready(function() {
         && div.has(e.target).length === 0 ) {
           div.removeClass('open')
           div.find('.dropdown-items').slideUp(200);
+
+          $('.dropdown-portal').remove();
     }
   });
+
+
+  function mobileDropdown() {
+    $('.overflow-x-auto .dropdown-label').click(function(e){
+      $('.dropdown-portal').remove();
+      const label = $(this);
+   
+      var elementX = label.offset().left;
+  
+      if(label.parent().hasClass('open') && isMobile()) {
+        label.parent().find('.dropdown-items').addClass('!hidden')
+  
+        label.parents('.overflow-x-auto').parent().append(`
+          <div class="dropdown-portal dropdown open z-50 w-[${label.parent().width()}px]">
+            <div class="dropdown-items !block !left-[${elementX - 16}px]">
+              ${label.parent().find('.dropdown-items').html()}
+            </div>
+          </div>
+        `);
+        
+        $('.dropdown-item').click(function(e){
+          e.preventDefault();
+          label.parent().find('.dropdown-label span').text($(this).text())
+          label.parent().find('input').val($(this).data('value'))
+          label.parent().find('.dropdown-items').slideToggle(200);
+          label.parent().removeClass('open')
+          $('.dropdown-portal').remove();
+        })
+
+      }
+    })
+  
+    $('.overflow-x-auto').scroll(function(){
+      $('.dropdown-portal').remove();
+      $( ".dropdown" ).each(function(){
+        $(this).removeClass('open');
+        $(this).find('.dropdown-items').slideUp(200)
+      })
+    })
+  }
+
+
+  if(isMobile()) {
+    mobileDropdown()
+  }else{
+    $('.dropdown-items').each(function(){
+      $(this).removeClass('!hidden')
+    })
+  }
+  // end dropdown
+
 
   let filterCount = $('.filter-check-button.active').length;
   $('.filter-btn-open').click(function(e){
@@ -507,12 +580,12 @@ $( document ).ready(function() {
     infinite: true,
     speed: 300,
     slidesToShow: 3,
-    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 -left-5 lg:-left-[63px] z-20 bg-white">
+    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 left-2 lg:-left-[63px] z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M11.5785 12.1072L16.5285 7.15719L15.1145 5.74319L8.75049 12.1072L15.1145 18.4712L16.5285 17.0572L11.5785 12.1072Z" fill="currentColor"></path>
     </svg>
   </button>`,
-    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 -right-5 lg:-right-[63px] z-20 bg-white">
+    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 right-2 lg:-right-[63px] z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.4215 12.1072L8.47152 7.15719L9.88551 5.74319L16.2495 12.1072L9.88551 18.4712L8.47151 17.0572L13.4215 12.1072Z" fill="currentColor"></path>
     </svg>
@@ -758,12 +831,12 @@ $( document ).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     lazyLoad: 'ondemand',
-    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 -left-5 lg:-left-[63px] z-20 bg-white">
+    prevArrow: `<button class="slider-prev flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 left-2 lg:-left-[63px] z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M11.5785 12.1072L16.5285 7.15719L15.1145 5.74319L8.75049 12.1072L15.1145 18.4712L16.5285 17.0572L11.5785 12.1072Z" fill="currentColor"></path>
     </svg>
   </button>`,
-    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 -right-5 lg:-right-[63px] z-20 bg-white">
+    nextArrow: `<button class="slider-next flex items-center justify-center shadow-xl w-11 h-11 rounded-full cursor-pointer text-primary_gray hover:text-white hover:bg-primary transition absolute top-1/2 -translate-y-1/2 right-2 lg:-right-[63px] z-20 bg-white">
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.4215 12.1072L8.47152 7.15719L9.88551 5.74319L16.2495 12.1072L9.88551 18.4712L8.47151 17.0572L13.4215 12.1072Z" fill="currentColor"></path>
     </svg>
@@ -796,4 +869,42 @@ $( document ).ready(function() {
   $(window).scroll(function () {
     return $('.nav-mob').toggleClass("z-40", $(window).scrollTop() > 0);
   });
+
+
+   // Функція для сортування таблиці за значенням стовпця
+   function sortTable(table, columnIndex, ascending) {
+    var rows = table.find('tbody > tr').get();
+
+    rows.sort(function (a, b) {
+        var keyA = $(a).children('td').eq(columnIndex).text();
+        var keyB = $(b).children('td').eq(columnIndex).text();
+
+        if (ascending) {
+            return keyA.localeCompare(keyB);
+        } else {
+            return keyB.localeCompare(keyA);
+        }
+    });
+
+    $.each(rows, function (index, row) {
+        table.children('tbody').append(row);
+    });
+}
+
+// Додаємо обробники подій для заголовків стовпців
+$('.table-sorted th svg').click(function () {
+    var table = $(this).parents('th').closest('table');
+    var columnIndex = $(this).parents('th').index();
+    var ascending = !$(this).parents('th').hasClass('sorted-asc');
+
+    // Скидаємо попереднє сортування
+    table.find('th').removeClass('sorted-asc sorted-desc');
+
+    // Сортуємо таблицю
+    sortTable(table, columnIndex, ascending);
+
+    // Додаємо клас для позначення напрямку сортування
+    $(this).parents('th').addClass(ascending ? 'sorted-asc' : 'sorted-desc');
+});
+
 }) 
