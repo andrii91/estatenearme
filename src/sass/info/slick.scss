@@ -105,4 +105,17 @@
 .slick-slide {
     margin-right:12px;
     margin-left:12px;
+    > div {
+        height: 100%;
+    }
+}
+
+.slick-track
+{
+    display: flex !important;
+}
+
+.slick-slide
+{
+    height: inherit !important;
 }
