@@ -567,9 +567,22 @@ $( document ).ready(function() {
     });
   });
 
+  $('.block-more').each(function(){
+    const blockMore = $(this);
+    const paragraph = blockMore.find('p');
+
+    if (paragraph.length > 2) {
+      paragraph.each(function(index){
+        if(index > 1) {
+          $(this).addClass('hidden')
+        }
+      })
+    }
+  })
+
   $('.show-more').click(function(e){
     e.preventDefault()
-    $(this).parent().find('.hidden').addClass('flex').removeClass('hidden');
+    $(this).parent().find('.hidden').removeClass('hidden');
     $(this).addClass('hidden')
   })
 
