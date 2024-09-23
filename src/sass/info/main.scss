@@ -757,3 +757,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: $primary;
 }
+
+.recent-blog-slider {
+  .slick-slide {
+    padding: 0;
+    >div {
+      height: fit-content;
+      padding: 12px 0;
+    }
+  }
+}

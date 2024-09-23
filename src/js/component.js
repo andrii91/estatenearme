@@ -920,4 +920,59 @@ $('.table-sorted th svg').click(function () {
     $(this).parents('th').addClass(ascending ? 'sorted-asc' : 'sorted-desc');
 });
 
+$('.recent-blog-slider').slick({
+  rows: 4,
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  lazyLoad: 'ondemand',
+  prevArrow: $('.slider-recent-blog-prev'),
+  nextArrow: $('.slider-recent-blog-next'),
+  responsive: [
+    {
+      breakpoint: 960,
+      settings: {
+        rows: 2,
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        rows: 1,
+      }
+    }
+  ]
+});
+
+$('.slider-similar-slider').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  lazyLoad: 'ondemand',
+  prevArrow: $('.slider-similar-blog-prev'),
+  nextArrow: $('.slider-similar-blog-next'),
+  responsive: [
+    {
+      breakpoint: 960,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ]
+});
+
+
 }) 
