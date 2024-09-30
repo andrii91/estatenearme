@@ -51,6 +51,22 @@ $( document ).ready(function() {
     classToRemove: "hidden_animation"
   });
 
+
+  $('.zoom-in').addClass("hidden_animation").viewportChecker({
+    classToAdd: 'visible animated zoomIn', 
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
+  });  
+
+  $('.zoom-in-down').addClass("hidden_animation").viewportChecker({
+    classToAdd: 'visible animated zoomInDown', 
+    offset: '0%',
+    removeClassAfterAnimation: true,
+    classToRemove: "hidden_animation"
+  });  
+
+
   $('.lang-current').click(function(e){
     e.preventDefault();
 
