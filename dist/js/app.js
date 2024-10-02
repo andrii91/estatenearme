@@ -1050,6 +1050,12 @@ $('.slider-similar-slider').slick({
     ]
     });
 
-  
+  $('.price-tab li').click(function(){
+    $('.price-tab li').removeClass('active');
+    $(this).addClass('active');
+
+    $('.price-summ').addClass('hidden').removeClass('flex');
+    $(`.price-summ.${$(this).data('tab')}`).removeClass('hidden').addClass('flex');
+  })
 
 }) 

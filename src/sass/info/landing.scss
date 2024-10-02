@@ -1,7 +1,4 @@
 .land {
-	&-tmpl {
-	}
-
 	&-header {
 		background: url(../images/land-header-bg.svg);
 		background-repeat: no-repeat;
@@ -146,4 +143,30 @@
 .bg-colours {
 	background: url('../images/bg-colours.svg') no-repeat center top;
 	background-size: 1865px
+}
+
+.price {
+	&-header {
+		background: url(../images/price-header.svg);
+		background-repeat: no-repeat;
+	}
+
+	&-tab {
+		.active {
+			background: radial-gradient(57.5% 57.5% at 50% 0%, #708EFF 0%, rgba(61, 91, 207, 0.00) 100%), #3D5BCF;
+			box-shadow: 0px 5px 7px 0px rgba(82, 67, 194, 0.23);
+			color: #fff;
+		}
+	}
+}
+
+.bg-popular {
+	background: radial-gradient(57.5% 57.52% at 48.33% 0%, #8CA4FF 0%, rgba(63, 92, 208, 0.03) 82.43%, rgba(61, 91, 207, 0.00) 100%), #5B76DE;
+}
+
+.modal {
+	.fancybox-close-small {
+		padding: 0;
+		color: #fff;
+	}
 }
