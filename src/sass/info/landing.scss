@@ -170,3 +170,19 @@
 		color: #fff;
 	}
 }
+
+.price-th {
+	background: linear-gradient(0deg, #5B76DE 0%, #5B76DE 100%), var(--btn-stroke, #D1DEFF);
+}
+.price-th-footer {
+	background: linear-gradient(0deg, #D2DBF8 0%, #D2DBF8 100%), var(--btn-stroke, #D1DEFF);
+}
+
+.doc-bg {
+	background: url(../images/doc-bg.svg) no-repeat center;
+	background-size: cover;
+
+	&-shadow {
+		box-shadow: 0px 4px 11px 0px #131212;
+	} 
+}
