@@ -1058,4 +1058,250 @@ $('.slider-similar-slider').slick({
     $(`.price-summ.${$(this).data('tab')}`).removeClass('hidden').addClass('flex');
   })
 
+
+  if($('div').hasClass('map-filter')) {
+        var map = L.map('map-filter').setView([51.505, -0.09], 13);
+
+    L.Map.addInitHook('addHandler', 'touchZoom', L.Map.TouchZoom);
+    L.Map.addInitHook('addHandler', 'doubleClickZoom', L.Map.DoubleClickZoom);
+    L.Map.addInitHook('addHandler', 'dragging', L.Map.Drag);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+    }).addTo(map);
+
+    var drawnItems = new L.FeatureGroup();
+    map.addLayer(drawnItems);
+
+    var drawing = false;
+    var points = [];
+    var polyline;
+    var isPencilActive = false;
+    var markers = [];
+    var initialMarkers = [];
+
+    // Custom clustering with orange color
+    var markerCluster = L.markerClusterGroup({
+      iconCreateFunction: function(cluster) {
+        var childCount = cluster.getChildCount();
+        var c = ' marker-cluster-small';
+
+        if (childCount > 10) {
+          c = ' marker-cluster-large';
+        } else if (childCount > 5) {
+          c = ' marker-cluster-medium';
+        }
+
+        return new L.DivIcon({
+          html: '<div><span>' + childCount + '</span></div>',
+          className: 'marker-cluster' + c,
+          iconSize: new L.Point(40, 40),
+          iconAnchor: [20, 20],
+        });
+      }
+    }).addTo(map);
+
+    var pencilOptions = {
+      color: '#f357a1',
+      weight: 4,
+      opacity: 0.7
+    };
+
+    // Function to smooth the line if needed (currently just returns the points)
+    function smoothLine(points) {
+      return points;
+    }
+
+    // Function to start drawing a polygon
+    function startDrawing(e) {
+      if (!isPencilActive) return;
+
+      drawing = true;
+      points = [e.latlng];
+      polyline = L.polyline(points, pencilOptions).addTo(map);
+
+      // Disable map interactions
+      map.dragging.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      map.touchZoom.disable();
+      map.boxZoom.disable();
+      map.keyboard.disable();
+      if (map.tap) {
+        map.tap.disable();
+        map.tapHold.disable();
+      }
+
+      map.getContainer().classList.add('drawing-cursor');
+    }
+
+    // Function to update polygon points while drawing
+    function drawMove(e) {
+      if (drawing) {
+        points.push(e.latlng);
+        polyline.setLatLngs(smoothLine(points));
+      }
+    }
+
+    // Function to finish drawing the polygon
+    function finishDrawing(e) {
+      if (drawing) {
+        drawing = false;
+
+        points.push(points[0]); // Close the polygon
+        var finalPolyline = L.polygon(smoothLine(points), pencilOptions).addTo(map);
+        drawnItems.addLayer(finalPolyline);
+
+        console.log('Polygon coordinates:', points.map(p => [p.lat, p.lng]));
+        var insidePoints = clearMarkersOutsidePolygon(points);
+        console.log('Points inside polygon:', insidePoints);
+
+        polyline.remove();
+
+        // Enable map interactions again
+        map.dragging.enable();
+        map.doubleClickZoom.enable();
+        map.scrollWheelZoom.enable();
+        map.touchZoom.enable();
+        map.boxZoom.enable();
+        map.keyboard.enable();
+        map.tap && map.tap.enable();
+
+        map.getContainer().classList.remove('drawing-cursor');
+        isPencilActive = false;
+        console.log("Pencil tool deactivated.");
+      }
+    }
+
+    // Event listeners for drawing polygons (Desktop)
+    map.on('mousedown', startDrawing);
+    map.on('mousemove', drawMove);
+    map.on('mouseup', finishDrawing);
+
+    // Mobile support for touch events
+    map.on('touchstart', function(e) {
+      e.originalEvent.preventDefault(); // Prevent default touch behavior
+      startDrawing(e);
+    }, { passive: false });
+
+    map.on('touchmove', function(e) {
+      e.originalEvent.preventDefault(); // Prevent default touch behavior
+      drawMove(e);
+    }, { passive: false });
+
+    map.on('touchend', function(e) {
+      e.originalEvent.preventDefault(); // Prevent default touch behavior
+      finishDrawing(e);
+    }, { passive: false });
+
+    // Activate the pencil tool on button click
+    $('#custom-pencil-button').on('click', function () {
+      isPencilActive = true;
+      $(this).addClass('!hidden');
+      $('#clear-button').removeClass('!hidden');
+      console.log("Pencil tool activated. Start drawing.");
+    });
+
+    // Function to clear polygons and restore markers
+    function clearPolygons() {
+      drawnItems.clearLayers();
+      markerCluster.clearLayers();
+      markers = [];
+      restoreMarkers(); // Restore the initial markers
+
+      $('#clear-button').addClass('!hidden');
+      $('#custom-pencil-button').removeClass('!hidden');
+      console.log("Polygon cleared and markers restored.");
+    }
+
+    // Clear the polygon and restore initial markers on button click
+    $('#clear-button').on('click', clearPolygons);
+
+    // Function to clear markers outside the polygon
+    function clearMarkersOutsidePolygon(polygonPoints) {
+      var polygon = L.polygon(polygonPoints);
+      var insidePoints = [];
+
+      markers.forEach(marker => {
+        if (!polygon.getBounds().contains(marker.getLatLng())) {
+          map.removeLayer(marker); // Remove markers outside the polygon
+        } else {
+          insidePoints.push(marker.getLatLng()); // Keep markers inside the polygon
+        }
+      });
+
+      markers = markers.filter(marker => polygon.getBounds().contains(marker.getLatLng()));
+      return insidePoints;
+    }
+
+    // Create custom markers with project information
+    function createCustomMarker(lat, lng, projectInfo) {
+      var customIcon = L.divIcon({
+        html: '<div class="h-5 w-5 bg-orange-500 rounded-full border border-white"></div>',
+        className: '',
+        iconSize: [20, 20]
+      });
+
+      var marker = L.marker([lat, lng], { icon: customIcon });
+
+      // Project info popup content
+      var popupContent = `
+        <div class="popup-content">
+          <img src="${projectInfo.image}" alt="Project Image" />
+          <div>
+            <h3 class="text-base block text-black font-bold">${projectInfo.title}</h3>
+            <span class="text-xs block text-black">${projectInfo.area}</span>
+            <span class="text-xs block text-black">${projectInfo.code}</span>
+          </div>
+          <a href="'${projectInfo.link}'"></a>
+        </div>
+      `;
+
+      marker.bindPopup(popupContent);
+      markerCluster.addLayer(marker);
+      return marker;
+    }
+
+    // Add random markers to the map
+    function addRandomMarkers() {
+      for (let i = 0; i < 10; i++) {
+        var lat = 51.505 + (Math.random() - 0.5) * 0.1;
+        var lng = -0.09 + (Math.random() - 0.5) * 0.1;
+
+        var projectInfo = {
+          title: 'Project ' + (i + 1),
+          area: 'Urbano, 41 769 m²',
+          code: 'CM-4174',
+          image: 'images/test10.webp', // Placeholder image URL
+          link: 'https://example.com/project/' 
+        };
+
+        var marker = createCustomMarker(lat, lng, projectInfo);
+        markers.push(marker);
+        initialMarkers.push([lat, lng]);
+      }
+    }
+
+    // Restore markers to their initial state
+    function restoreMarkers() {
+      markers = []; // Clear the markers array before restoring
+      
+      initialMarkers.forEach((coords, index) => {
+        var projectInfo = {
+          title: 'Project ' + (index + 1),
+          area: 'Urbano, 41 769 m²',
+          code: 'CM-4174',
+          image: 'images/test10.webp',
+          link: 'https://example.com/project/'
+        };
+
+        var marker = createCustomMarker(coords[0], coords[1], projectInfo);
+        markers.push(marker);
+      });
+    }
+
+    // Initialize random markers on page load
+    addRandomMarkers();
+  }
+
 }) 

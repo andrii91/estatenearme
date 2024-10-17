@@ -47,6 +47,7 @@ gulp.task('js_v', async function() {
             'src/js/vendor/jquery.fancybox.min.js',
             'src/js/vendor/apexcharts.min.js',
             'src/js/vendor/leaflet.js',
+            'src/js/vendor/leaflet.markercluster.js',
             
         ])
         .pipe(concat('vendor.js'))
