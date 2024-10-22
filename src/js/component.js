@@ -1060,11 +1060,10 @@ $('.slider-similar-slider').slick({
 
 
   if($('div').hasClass('map-filter')) {
-        var map = L.map('map-filter').setView([51.505, -0.09], 13);
-
-    L.Map.addInitHook('addHandler', 'touchZoom', L.Map.TouchZoom);
-    L.Map.addInitHook('addHandler', 'doubleClickZoom', L.Map.DoubleClickZoom);
-    L.Map.addInitHook('addHandler', 'dragging', L.Map.Drag);
+    var map = L.map('map-filter', {
+      scrollWheelZoom: false,
+      dragging: false,
+    }).setView([51.505, -0.09], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -1161,7 +1160,6 @@ $('.slider-similar-slider').slick({
         // Enable map interactions again
         map.dragging.enable();
         map.doubleClickZoom.enable();
-        map.scrollWheelZoom.enable();
         map.touchZoom.enable();
         map.boxZoom.enable();
         map.keyboard.enable();
@@ -1178,25 +1176,11 @@ $('.slider-similar-slider').slick({
     map.on('mousemove', drawMove);
     map.on('mouseup', finishDrawing);
 
-    // Mobile support for touch events
-    map.on('touchstart', function(e) {
-      e.originalEvent.preventDefault(); // Prevent default touch behavior
-      startDrawing(e);
-    }, { passive: false });
-
-    map.on('touchmove', function(e) {
-      e.originalEvent.preventDefault(); // Prevent default touch behavior
-      drawMove(e);
-    }, { passive: false });
-
-    map.on('touchend', function(e) {
-      e.originalEvent.preventDefault(); // Prevent default touch behavior
-      finishDrawing(e);
-    }, { passive: false });
-
     // Activate the pencil tool on button click
     $('#custom-pencil-button').on('click', function () {
       isPencilActive = true;
+      $('body').addClass('overflow-hidden');
+      $('#map-filter-container').addClass('fullscreen-map');
       $(this).addClass('!hidden');
       $('#clear-button').removeClass('!hidden');
       console.log("Pencil tool activated. Start drawing.");
@@ -1208,6 +1192,8 @@ $('.slider-similar-slider').slick({
       markerCluster.clearLayers();
       markers = [];
       restoreMarkers(); // Restore the initial markers
+      $('body').removeClass('overflow-hidden');
+      $('#map-filter-container').removeClass('fullscreen-map');
 
       $('#clear-button').addClass('!hidden');
       $('#custom-pencil-button').removeClass('!hidden');
@@ -1258,6 +1244,12 @@ $('.slider-similar-slider').slick({
       `;
 
       marker.bindPopup(popupContent);
+
+      // Add event listener to open popup on click for mobile
+      marker.on('click', function () {
+        marker.openPopup();
+      });
+
       markerCluster.addLayer(marker);
       return marker;
     }
@@ -1302,6 +1294,101 @@ $('.slider-similar-slider').slick({
 
     // Initialize random markers on page load
     addRandomMarkers();
+    // Функція для початку малювання полігону на мобільному
+    function startDrawingMobile(e) {
+      if (!isPencilActive) return;
+
+      drawing = true;
+      
+      // Отримуємо координати першого дотику
+      const latLng = map.layerPointToLatLng(L.point(e.touches[0].clientX, e.touches[0].clientY));
+      points = [latLng];
+      
+      polyline = L.polyline(points, pencilOptions).addTo(map);
+
+      // Вимкнути взаємодію з картою
+      disableMapInteractions();
+    }
+
+    // Функція для продовження малювання полігону на мобільному
+    function drawMoveMobile(e) {
+      if (drawing) {
+        const latLng = map.layerPointToLatLng(L.point(e.touches[0].clientX, e.touches[0].clientY));
+        points.push(latLng);
+        polyline.setLatLngs(smoothLine(points));
+      }
+    }
+
+    // Функція для завершення малювання полігону
+    function finishDrawingMobile(e) {
+      if (drawing) {
+        drawing = false;
+
+        // Завершити малювання полігону і замкнути його
+        points.push(points[0]);
+        var finalPolyline = L.polygon(smoothLine(points), pencilOptions).addTo(map);
+        drawnItems.addLayer(finalPolyline);
+
+        console.log('Polygon coordinates:', points.map(p => [p.lat, p.lng]));
+        var insidePoints = clearMarkersOutsidePolygon(points);
+        console.log('Points inside polygon:', insidePoints);
+
+        polyline.remove();
+
+        // Відновити взаємодію з картою
+        enableMapInteractions();
+        isPencilActive = false;
+        console.log("Pencil tool deactivated.");
+        $('#map-filter-container').removeClass('fullscreen-map');
+        $('body').removeClass('overflow-hidden');
+        //тут треба запускать якийсь хуякс
+      }
+    }
+
+    // Вимкнути всі взаємодії з картою під час малювання
+    function disableMapInteractions() {
+      map.dragging.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      map.touchZoom.disable();
+      map.boxZoom.disable();
+      map.keyboard.disable();
+      if (map.tap) {
+        map.tap.disable();
+        map.tapHold.disable();
+      }
+      map.getContainer().classList.add('drawing-cursor');
+    }
+
+    // Увімкнути всі взаємодії з картою після малювання
+    function enableMapInteractions() {
+      map.dragging.enable();
+      map.doubleClickZoom.enable();
+      map.touchZoom.enable();
+      map.boxZoom.enable();
+      map.keyboard.enable();
+      if (map.tap) {
+        map.tap.enable();
+      }
+      map.getContainer().classList.remove('drawing-cursor');
+    }
+
+    // Прив'язка подій до контейнера з класом map-filter
+    $('.map-filter').on('touchstart', function(e) {
+      // e.preventDefault(); // Заборонити стандартну поведінку дотику
+      startDrawingMobile(e.originalEvent);
+    });
+
+    $('.map-filter').on('touchmove', function(e) {
+      // e.preventDefault(); // Заборонити стандартну поведінку дотику
+      drawMoveMobile(e.originalEvent);
+    });
+
+    $('.map-filter').on('touchend', function(e) {
+      // e.preventDefault(); // Заборонити стандартну поведінку дотику
+      finishDrawingMobile(e.originalEvent);
+
+    });
   }
 
 }) 
