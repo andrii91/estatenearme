@@ -1167,6 +1167,8 @@ $('.slider-similar-slider').slick({
 
         map.getContainer().classList.remove('drawing-cursor');
         isPencilActive = false;
+        $('#map-filter-container').removeClass('fullscreen-map');
+        $('body').removeClass('overflow-hidden');
         console.log("Pencil tool deactivated.");
       }
     }
