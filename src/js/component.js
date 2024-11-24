@@ -581,6 +581,30 @@ $( document ).ready(function() {
             $('.menu-single-page').scrollLeft(scrollLeftMenu);
         }
     });
+
+    $('.section-nav').each(function () {
+      var sectionTop = $(this).offset().top - 150; // Adjusted for better highlighting
+
+      if (currentPosition >= sectionTop) {
+          var sectionId = $(this).attr('id');
+          var $activeLink = $('.nav-sticky a[href="#' + sectionId + '"]');
+
+          // Очистити класи перед встановленням
+          $('.nav-sticky a').removeClass('active complate');
+
+          // Додати клас active до активного елементу
+          $activeLink.addClass('active');
+
+          // Додати клас complate до всіх попередніх елементів
+          $activeLink.prevAll().addClass('complate');
+
+          // Scroll to the left to make the active link visible
+          // var scrollLeftMenu = $activeLink.offset().left - 20;
+          // $('.menu-single-page').scrollLeft(scrollLeftMenu);
+      }
+  });
+
+
   });
 
   $('.block-more').each(function(){
@@ -1392,5 +1416,26 @@ $('.slider-similar-slider').slick({
 
     });
   }
+
+
+  $('.select select').change(function () {
+    if ($(this).val().length > 0) {
+      $(this).parents('.select').find('button').removeClass('hidden');
+    }else{
+      $(this).parents('.select').find('button').addClass('hidden');
+    }
+  })
+
+  $('.select select').each(function () {
+    if ($(this).val().length > 0) {
+      $(this).parents('.select').find('button').removeClass('hidden');
+    }else{
+      $(this).parents('.select').find('button').addClass('hidden');
+    }
+  })
+
+   $('.select button').click(function () {
+    $(this).parents('.select').find('select').val('').change();
+   })
 
 }) 

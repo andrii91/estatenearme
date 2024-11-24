@@ -1636,6 +1636,11 @@
       </defs>
     </symbol>
 
+    <symbol id="close" viewBox="0 0 24 24" fill="none">
+      <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
   </svg>
 
   <div class="mobile-menu lg:!hidden">
@@ -2163,7 +2168,7 @@
 
   <section class="py-12">
     <div class="mx-auto px-4 max-w-[1232px]">
-      <div class="flex items-start justify-between flex-wrap lg:flex-nowrap gap-6 w-full">
+      <div class="flex justify-between flex-wrap lg:flex-nowrap gap-6 w-full">
         <div class="lg:w-[306px] w-full lg:sticky top-[100px]">
           <div class="bg-white rounded-3xl p-2 flex flex-col w-full gap-2 block-shadow-gray min-h-[324px] mb-8">
             <a class="py-3 px-8 flex items-center gap-4 rounded-full transition duration-300 font-bold hover:bg-[#FFF5F0] group" href="#"><svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#profile"></use></svg> Profile</a>
@@ -2190,15 +2195,203 @@
           </div>
         </div>
 
-        <div class="lg:w-[calc(100%_-_306px)] bg-white rounded-3xl px-4 py-8 lg:p-8 flex flex-col w-full gap-2 block-shadow-gray ">
-          <div class="sticky top-20 flex items-center">
-            <div id="#1">1. Basic data</div>
-            <div id="#2">2. Location</div>
-            <div id="#3">3. Media</div>
-            <div id="#4">4. Features</div>
-            <div id="#5">5. Contact Form</div>
+        <form method="post" class="lg:w-[calc(100%_-_306px)] flex flex-col gap-6">
+          <div class="nav-sticky sticky top-24 flex items-center z-10">
+            <a class="text-sm -ml-1 font-medium min-h-14 min-w-[184px] flex items-center justify-center gap-1 active" href="#1">1. Basic data</a>
+            <a class="text-sm -ml-1 font-medium min-h-14 min-w-[184px] flex items-center justify-center gap-1" href="#2">2. Location</a>
+            <a class="text-sm -ml-1 font-medium min-h-14 min-w-[184px] flex items-center justify-center gap-1" href="#3">3. Media</a>
+            <a class="text-sm -ml-1 font-medium min-h-14 min-w-[184px] flex items-center justify-center gap-1" href="#4">4. Features</a>
+            <a class="text-sm -ml-1 font-medium min-h-14 min-w-[184px] flex items-center justify-center gap-1" href="#5">5. Contact Form</a>
           </div>
-        </div>
+
+          <div id="1" class="section-nav bg-white rounded-3xl px-4 py-8 lg:p-8 flex flex-col w-full gap-2 block-shadow-gray gap-6">
+            <h2 class="text-xl uppercase font-bold">1. Basic data</h2>
+
+            <div class="flex flex-col gap-4 w-full">
+              <label class="font-bold" for="promotion-name">Promotion name<span class="text-[#FF6B2A]">*</span></label>
+              <input id="promotion-name" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text" placeholder="Write the name of the residential complex" required>
+            </div>
+
+            <div class="flex flex-col gap-4 w-full">
+              <label class="font-bold" for="price">Price (€)</label>
+              <input id="price" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="number" placeholder="100 0000">
+            </div>
+
+            <div class="flex flex-col gap-4 w-full">
+              <div class="font-bold mb-4" for="price">Is the price or conditions negotiable?</div>
+
+              <fieldset class="flex items-center gap-2">
+                <input id="yes" class="peer/yes hidden" type="radio" name="status" checked />
+                <label for="yes" class="peer-checked/yes:border-[#FF6B2A] peer-checked/yes:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">Yes</label>
+
+                <input id="no" class="peer/no hidden" type="radio" name="status" />
+                <label for="no" class="peer-checked/no:border-[#FF6B2A] peer-checked/no:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">No</label>
+              </fieldset>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-4 gap-y-6 ">
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="status">Publication status:<span class="text-[#FF6B2A]">*</span></label>
+
+                <div class="select flex items-center relative">
+                  <select id="status" class="appearance-none bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+                    <option value="" selected>Choice status</option>
+                    <option value="Active">Active</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="url">Promotion reference on your website<span class="text-[#FF6B2A]">*</span></label>
+                <input id="url" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text" placeholder="Write the name of the residential complex" required>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="architect">Promotion architect:</label>
+                <input id="architect" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text" >
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="company">Construction company:</label>
+                <input id="company" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="url">Promotion type:<span class="text-[#FF6B2A]">*</span></label>
+                <input id="url" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text" placeholder="Write the name of the residential complex" required>
+              </div>
+              
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold">Complex type:</label>
+                <div class="select flex items-center relative">
+                  <select id="type" class="appearance-none bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+                    <option value="" selected>Choice type</option>
+                    <option value="no selected">no selected</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="Property">Property type<span class="text-[#FF6B2A]">*</span></label>
+
+                <div class="select flex items-center relative">
+                  <select id="Property" class="appearance-none bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+                    <option value="" selected>Choice Property</option>
+                    <option value="new building">new building</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="Property">Sub Category<span class="text-[#FF6B2A]">*</span></label>
+
+                <div class="select flex items-center relative">
+                  <select id="Category" class="appearance-none bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+                    <option value="" selected>Choice Category</option>
+                    <option value="penthouse">penthouse</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="announcement">Type of announcement<span class="text-[#FF6B2A]">*</span></label>
+
+                <div class="select flex items-center relative">
+                  <select id="announcement" class="appearance-none bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+                    <option value="" selected>Choice announcement</option>
+                    <option value="penthouse">penthouse</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="Complex">Complex<span class="text-[#FF6B2A]">*</span></label>
+
+                <div class="select flex items-center relative">
+                  <select id="Complex" class="appearance-none bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+                    <option value="" >Choice Complex</option>
+                    <option value="penthouse" selected>Marina</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold">Description</label>
+                <div class="select flex items-center relative">
+                  <select id="Description" class="appearance-none bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text">
+                    <option value="" selected>Choice Description</option>
+                    <option value="Espanol" selected>Espanol</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                    <option value="Lorem">Lorem ipsum</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-4 w-full">
+              <textarea class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-[#5E5E5E] w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" placeholder="Describe in detail the characteristics of the land to attract the maximum number of buyers"></textarea>
+            </div>
+          </div>
+          <div id="2" class="section-nav bg-white rounded-3xl px-4 py-8 lg:p-8 flex flex-col w-full gap-2 block-shadow-gray"></div>
+          <div id="3" class="section-nav bg-white rounded-3xl px-4 py-8 lg:p-8 flex flex-col w-full gap-2 block-shadow-gray"></div>
+          <div id="4" class="section-nav bg-white rounded-3xl px-4 py-8 lg:p-8 flex flex-col w-full gap-2 block-shadow-gray"></div>
+          <div id="5" class="section-nav bg-white rounded-3xl px-4 py-8 lg:p-8 flex flex-col w-full gap-2 block-shadow-gray"></div>
+        </form>
       </div>
     </div>
   </section>
