@@ -1434,8 +1434,8 @@ $('.slider-similar-slider').slick({
     }
   })
 
-   $('.select button').click(function () {
-    $(this).parents('.select').find('select').val('').change();
-   })
+ $('.select button').click(function () {
+  $(this).parents('.select').find('select').val('').change();
+ })
 
 }) 
