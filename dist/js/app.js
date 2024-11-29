@@ -1438,4 +1438,118 @@ $('.slider-similar-slider').slick({
   $(this).parents('.select').find('select').val('').change();
  })
 
+  const $dropArea = $('#drop-area');
+  const $fileInput = $('#upload-image');
+  const $preview = $('#preview');
+
+  // Кнопка відкриття файлового менеджера
+  $('#choose-file-btn').on('click', function () {
+    $fileInput.click();
+  });
+
+  // Додавання стилів при перетягуванні
+  $dropArea.on('dragover', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).addClass('hover:border-primary_hover');
+  });
+
+  // Видалення стилів після виходу
+  $dropArea.on('dragleave', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).removeClass('hover:border-primary_hover');
+  });
+
+  // Обробка файлів, що перетягнуті
+  $dropArea.on('drop', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).removeClass('hover:border-primary_hover');
+    const files = e.originalEvent.dataTransfer.files;
+    handleFiles(files);
+  });
+
+  // Обробка файлів, вибраних через файловий менеджер
+  $fileInput.on('change', function () {
+    const files = this.files;
+    handleFiles(files);
+  });
+
+  // Вивід прев'ю
+  function handleFiles(files) {
+    // Array.from(files).forEach(file => {
+    //   if (file.type.startsWith('image/')) {
+    //     const reader = new FileReader();
+    //     reader.onload = function (e) {
+    //       const img = $('<img>')
+    //         .attr('src', e.target.result)
+    //         .addClass('w-full h-auto rounded shadow-lg');
+    //       const container = $('<div>').addClass('overflow-hidden rounded-xl border border-gray-300 shadow-md');
+    //       container.append(img);
+    //       $preview.append(container);
+    //     };
+    //     reader.readAsDataURL(file);
+    //   }
+    // });
+  }
+
+
+
+  const $dropAreaFile = $('#drop-area-file');
+  const $fileInputFile = $('#upload-file');
+  const $previewFile = $('#preview-pdf');
+
+  // Кнопка відкриття файлового менеджера
+  $('#choose-file-btn-pdf').on('click', function () {
+    $fileInputFile.click();
+  });
+
+  // Додавання стилів при перетягуванні
+  $dropAreaFile.on('dragover', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).addClass('hover:border-primary_hover');
+  });
+
+  // Видалення стилів після виходу
+  $dropAreaFile.on('dragleave', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).removeClass('hover:border-primary_hover');
+  });
+
+  // Обробка файлів, що перетягнуті
+  $dropAreaFile.on('drop', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).removeClass('hover:border-primary_hover');
+    const files = e.originalEvent.dataTransfer.files;
+    handleFilesPdf(files);
+  });
+
+  // Обробка файлів, вибраних через файловий менеджер
+  $fileInputFile.on('change', function () {
+    const files = this.files;
+    handleFilesPdf(files);
+  });
+
+  // Вивід прев'ю
+  function handleFilesPdf(files) {
+    // Array.from(files).forEach(file => {
+    //   if (file.type.startsWith('image/')) {
+    //     const reader = new FileReader();
+    //     reader.onload = function (e) {
+    //       const img = $('<img>')
+    //         .attr('src', e.target.result)
+    //         .addClass('w-full h-auto rounded shadow-lg');
+    //       const container = $('<div>').addClass('overflow-hidden rounded-xl border border-gray-300 shadow-md');
+    //       container.append(img);
+    //       $preview.append(container);
+    //     };
+    //     reader.readAsDataURL(file);
+    //   }
+    // });
+  }
+
 }) 
