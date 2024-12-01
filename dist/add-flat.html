@@ -3123,10 +3123,11 @@
     <div class="mx-auto px-4 max-w-[1232px]">
       <h1 class="flex items-center justify-center gap-4 text-3xl font-bold">
         <svg class="h-[35px] w-[35px] text-primary">
-          <use xlink:href="#complexes-icon"></use>
+          <use xlink:href="#flats-icon"></use>
         </svg>
-        Add New Complex
+        Add New Flat
       </h1>
+      <p class="text-primary_gray text-center mt-6">You can publish new flats, but be sure to complete all product details to improve ad quality and ranking.</p>
     </div>
   </header>
 
@@ -3181,17 +3182,33 @@
               <input id="price" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray w-full focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="number" placeholder="100 0000">
             </div>
 
-            <div class="flex flex-col gap-4 w-full">
-              <div class="font-bold mb-4" for="price">Is the price or conditions negotiable?</div>
+            <div class="grid md:grid-cols-2 gap-x-4 gap-y-6 ">
+              <div class="flex flex-col gap-4 w-full">
+                <div class="font-bold mb-4" for="price">Is the price or conditions negotiable?</div>
 
-              <fieldset class="flex items-center gap-2">
-                <input id="yes" class="peer/yes hidden" type="radio" name="status" checked />
-                <label for="yes" class="peer-checked/yes:border-[#FF6B2A] peer-checked/yes:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">Yes</label>
+                <fieldset class="flex items-center gap-2">
+                  <input id="yes" class="peer/yes hidden" type="radio" name="status" checked />
+                  <label for="yes" class="peer-checked/yes:border-[#FF6B2A] peer-checked/yes:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">Yes</label>
 
-                <input id="no" class="peer/no hidden" type="radio" name="status" />
-                <label for="no" class="peer-checked/no:border-[#FF6B2A] peer-checked/no:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">No</label>
-              </fieldset>
+                  <input id="no" class="peer/no hidden" type="radio" name="status" />
+                  <label for="no" class="peer-checked/no:border-[#FF6B2A] peer-checked/no:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">No</label>
+                </fieldset>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <div class="font-bold mb-4">Apartment in a new building?</div>
+
+                <fieldset class="flex items-center gap-2">
+                  <input id="buildingyes" class="peer/buildingyes hidden" type="radio" name="status" checked />
+                  <label for="buildingyes" class="peer-checked/buildingyes:border-[#FF6B2A] peer-checked/buildingyes:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">Yes</label>
+
+                  <input id="buildingno" class="peer/buildingno hidden" type="radio" name="status" />
+                  <label for="buildingno" class="peer-checked/buildingno:border-[#FF6B2A] peer-checked/buildingno:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">No</label>
+                </fieldset>
+              </div>
             </div>
+
+            <div class="border-t border-[#BDBDBD]"></div>
 
             <div class="grid md:grid-cols-2 gap-x-4 gap-y-6 ">
               <div class="flex flex-col gap-4 w-full">

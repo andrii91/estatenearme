@@ -3123,12 +3123,12 @@
     <div class="mx-auto px-4 max-w-[1232px]">
       <h1 class="flex items-center justify-center gap-4 text-3xl font-bold">
         <svg class="h-[35px] w-[35px] text-primary">
-          <use xlink:href="#complexes-icon"></use>
+          <use xlink:href="#houses-icon"></use>
         </svg>
-        Add New Complex
+        Add New House
       </h1>
 
-      <p class="text-primary_gray text-center mt-6">You can publish new complexes, but be sure to complete all product details to improve ad quality and ranking.</p>
+      <p class="text-primary_gray text-center mt-6">You can publish new houses, but be sure to complete all product details to improve ad quality and ranking.</p>
     </div>
   </header>
 
@@ -3764,6 +3764,26 @@
                   <button type="button" class="absolute right-10 hidden">
                     <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
                   </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col">
+              <div class="flex items-center justify-between">
+                <div class="min-w-[180px] max-w-[180px] flex-1">
+                  <div class="flex items-center gap-2">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                    <span>Water</span>
+                  </div>
+                </div>
+                <div class="flex-1 max-w-[calc(100%_-_180px)]">
+                  <fieldset class="flex items-center gap-2">
+                    <input id="yesWater" class="peer/yesWater hidden" type="radio" name="status" checked />
+                    <label for="yesWater" class="peer-checked/yesWater:border-[#FF6B2A] peer-checked/yesWater:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">Yes</label>
+
+                    <input id="noWater" class="peer/noWater hidden" type="radio" name="status" />
+                    <label for="noWater" class="peer-checked/noWater:border-[#FF6B2A] peer-checked/noWater:text-[#FF6B2A] uppercase bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray text-sm focus:border-[#FF6B2A] focus-visible:ring-0 focus:outline-none focus-visible:outline-none cursor-pointer">No</label>
+                  </fieldset>
                 </div>
               </div>
             </div>
