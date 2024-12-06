@@ -862,10 +862,11 @@ $( document ).ready(function() {
       var reader = new FileReader();
       reader.onload = function(e){
         console.log(e.target)
-        obj.html(`
-          <img class="w-full h-full object-cover rounded-full" src="${e.target.result}" />
-        `)
-
+        if (obj.length > 0) {
+          obj.html(`
+            <img class="w-full h-full object-cover rounded-full" src="${e.target.result}" />
+          `)
+        }
         
         $('#url').html(`
           <svg class="h-4 w-4 "><use xlink:href="#upload"></use></svg>
@@ -1551,5 +1552,20 @@ $('.slider-similar-slider').slick({
     //   }
     // });
   }
+
+  $('.dropdown-multiple-button').on('click', function () {
+    $(this).siblings('.dropdown-multiple-menu').toggleClass('hidden');
+  });
+
+  // Закривати меню при кліку поза ним
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.dropdown-multiple').length) {
+      $('.dropdown-multiple-menu').addClass('hidden');
+    }
+  });
+
+  $('#logo-file').on('change', function(){
+    readURL(this, '');  //Change the image
+  });
 
 }) 
