@@ -4130,7 +4130,7 @@
         <svg class="h-[35px] w-[35px] text-primary">
           <use xlink:href="#requests"></use>
         </svg>
-        Requests
+        Create a request
       </h1>
     </div>
   </header>
@@ -4164,780 +4164,182 @@
           </div>
         </div>
 
-        <div class="lg:w-[calc(100%_-_306px)]  flex flex-col w-full gap-3.5 ">
-          <div class="bg-white rounded-3xl px-4 py-8 lg:p-8 block-shadow-gray">
-            <div class="flex flex-wrap md:flex-nowrap gap-2 relative  w-full">
-              <input type="text" name="search" class="py-3 min-h-[52px] min-w-[210px] leading-none text-sm px-6 bg-primary_gray_light rounded-xl w-full text-sm text-primary_dark placeholder:text-primary_dark flex-1" placeholder="Search by client phone number, client name or application number">
-             
-              <button type="button" class="absolute right-10 hidden">
-                <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
-              </button>
-               <div class="select flex items-center relative flex-1 md:flex-none ">
-                <select id="Status" class="appearance-none py-3 min-h-[52px] leading-none text-sm pl-6 pr-8 rounded-xl text-primary_dark font-medium border border-[#DCDCDC] min-w-[100px] bg-white min-h-[52px] leading-none focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" required="">
-                  <option value="" selected="">Status</option>
-                  <option value="new building">Status</option>
-                  <option value="Lorem">Lorem </option>
-                  <option value="Lorem">Lorem </option>
-                  <option value="Lorem">Lorem </option>
-                  <option value="Lorem">Lorem </option>
-                </select>
+        <div class="lg:w-[calc(100%_-_306px)]  flex flex-col w-full gap-8 ">
+          <div class="bg-white rounded-3xl px-4 py-8 lg:p-8 block-shadow-gray flex flex-col gap-6">
+            <h2 class="text-xl uppercase font-bold">Create a request</h2>
+            <div class="grid md:grid-cols-2 gap-x-4 gap-y-6">
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="name">Client name<span class="text-primary">*</span></label>
+                <input id="name" class="bg-primary_gray_light border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text"  required="" value="Vasyl">
               </div>
-              <button class="py-3 min-h-[52px] leading-none text-sm px-6 rounded-xl text-sm text-primary_dark font-medium border border-[#DCDCDC] min-w-[100px] bg-white min-h-[52px] leading-none flex-1 md:flex-none" type="button">Date</button>
-              <button type="submit" class="bg-primary rounded-xl p-3 flex items-center justify-center text-white hover:bg-primary_hover shadow-lg shadow-[rgba(255, 128, 72, 0.20)] transition duration-300  flex-1 md:flex-none min-w-[52px] min-h-[52px]">
-                <svg class="h-6 w-6">
-                  <use xlink:href="#search"></use>
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="lastname">Client's last name<span class="text-primary">*</span></label>
+                <input id="lastname" class="bg-primary_gray_light border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text"  required="" value="Vasyl">
+              </div>
+
+               <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="phone">Client’s phone number<span class="text-primary">*</span></label>
+                <div class="bg-primary_gray_light border border-transparent transition px-6 py-[11px] rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm flex items-center gap-4 dropdown-phone-wrap">
+                  <div class="dropdown-phone leading-none">
+                    <button class="dropdown-phone-label bg-transparent border-0 !shadow-none !p-0">
+                      <span >
+                       <img class="h-6 w-6" src="https://spain.estatenearme.com/images/icons/lang/en.png" alt="">
+                       </span> 
+                      <svg class="dropdown-phone-label-icon">
+                        <use xlink:href="#arrow_down"></use>
+                      </svg>
+                    </button>
+                    <div class="dropdown-phone-items min-w-[100px]">
+                      <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+123">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/en.png" alt="">
+                        </span>
+                        +123
+                      </button>
+                       <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+321">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/es.png" alt="">
+                        </span>
+                        +321
+                      </button>
+                       <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+345">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/it.png" alt="">
+                        </span>
+                        +345
+                      </button>
+                      <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+449">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/pt.png" alt="">
+                        </span>
+                        +449
+                      </button>
+                      
+                    </div>
+
+                  </div>
+                  <input data-phone="phone" id="phone" class="border-0 bg-transparent focus-visible:ring-0 focus:outline-none focus-visible:outline-none font-bold text-black" type="tel"  required="" value="+123">
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="phoneAnother">Another one phone number<span class="text-primary">*</span></label>
+                <div class="bg-primary_gray_light border border-transparent transition px-6 py-[11px] rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm flex items-center gap-4 dropdown-phone-wrap">
+                  <div class="dropdown-phone leading-none">
+                    <button class="dropdown-phone-label bg-transparent border-0 !shadow-none !p-0">
+                      <span >
+                       <img class="h-6 w-6" src="https://spain.estatenearme.com/images/icons/lang/en.png" alt="">
+                       </span> 
+                      <svg class="dropdown-phone-label-icon">
+                        <use xlink:href="#arrow_down"></use>
+                      </svg>
+                    </button>
+                    <div class="dropdown-phone-items min-w-[100px]">
+                      <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+123">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/en.png" alt="">
+                        </span>
+                        +123
+                      </button>
+                       <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+321">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/es.png" alt="">
+                        </span>
+                        +321
+                      </button>
+                       <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+345">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/it.png" alt="">
+                        </span>
+                        +345
+                      </button>
+                      <button type="button" class="dropdown-phone-item !flex item-center gap-2" data-value="+449">
+                        <span class="flex items-center gap-2">
+                           <img class="h-6 w-6 min-w-6" src="https://spain.estatenearme.com/images/icons/lang/pt.png" alt="">
+                        </span>
+                        +449
+                      </button>
+                      
+                    </div>
+
+                  </div>
+                  <input data-phone="phone" id="phoneAnother" class="border-0 bg-transparent focus-visible:ring-0 focus:outline-none focus-visible:outline-none font-bold text-black" type="tel"  required="" value="+123">
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="email">Email</label>
+                <input id="email" class="bg-primary_gray_light border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm" type="text" placeholder="email@gmail.com">
+              </div>
+              <button href="#" class="flex items-center justify-center px-4 py-2.5 text-nowrap xl:min-w-28 h-[50px] border border-primary text-sm text-primary rounded-md leading-none hover:border-primary_hover hover:bg-primary_hover hover:text-white font-bold transition duration-300 mt-auto">
+                <span class="text-black">Add Contact</span>
+                <svg class="min-w-6 w-6 h-6 ml-2.5">
+                  <use xlink:href="#plus-icon"></use>
                 </svg>
               </button>
+
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="phoneAnother">Budget (€)</label>
+                <div class="bg-primary_gray_light border border-transparent transition px-6 py-[11px] rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm flex items-center justify-between gap-4">
+                  <input data-phone="phone" id="phone" class="border-0 bg-transparent focus-visible:ring-0 focus:outline-none focus-visible:outline-none font-bold text-black w-full" type="number" value="00">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 10H16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 14H13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.0006 6.00003C17.5777 4.70768 15.7229 3.99427 13.8006 4.00003C12.7632 4.01308 11.7384 4.23037 10.785 4.63949C9.83147 5.0486 8.96791 5.64153 8.2436 6.38442C7.51929 7.1273 6.9484 8.00559 6.56355 8.96913C6.1787 9.93266 5.98743 10.9626 6.00064 12C6.00064 16.4 9.50064 20 13.8006 20C15.8006 20 17.6006 19.2 19.0006 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 w-full">
+                <label class="font-bold" for="facade">Number of br-s</label>
+
+                <div class="select flex items-center relative">
+                  <select id="facade" class="appearance-none bg-primary_gray_light border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm">
+                    <option value="" selected>Choice Number</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+
+                  <button type="button" class="absolute right-10 hidden">
+                    <svg class="h-6 w-6 transition duration-300 text-primary_gray group-hover:text-primary"><use xlink:href="#close"></use></svg>
+                  </button>
+                </div>
+              </div>
             </div>
+
+            <div class="flex flex-col gap-4 w-full">
+              <label class="font-bold" for="Comment">Comment</label>
+              <textarea id="Comment" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm min-h-[121px]" placeholder="Describe in detail the characteristics of the land to attract the maximum number of buyers"></textarea>
+            </div>
+           <div class="flex flex-col gap-4 w-full">
+              <label class="font-bold" for="Сustomer">Сustomer info</label>
+              <textarea id="Сustomer" class="bg-[#F3F4F5] border border-transparent transition px-6 py-3.5 rounded-xl text-primary_gray w-full focus:border-primary focus-visible:ring-0 focus:outline-none focus-visible:outline-none text-sm min-h-[121px]" placeholder="Provide more detailed information about the client"></textarea>
+            </div>
+
+            <label class="flex items-center gap-2 cursor-pointer relative" for="appll">
+              <input type="checkbox" class="hidden peer" id="appll">
+              <div class="w-4 h-4 rounded border border-[#D0D5DD] flex items-center justify-center transition-all duration-300 peer-checked:border-primary peer-checked:bg-[#FFDACA]"></div>
+              <svg class="w-3 h-3 text-primary opacity-0 transition-opacity duration-300 peer-checked:opacity-100 absolute top-1 left-0.5" viewBox="0 0 12 12" fill="none"><path d="M10 3L4.5 8.5L2 6" stroke="currentColor" stroke-width="1.6666" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <span class="text-[#344054] font-medium text-sm">The client consents to the processing of personal data</span>
+            </label>
           </div>
-
-          <div class="border border-[#EAECF0] rounded-lg overflow-hidden bg-white">
-            <div class="px-6 py-5">
-              <button type="submit" class="bg-primary rounded-xl gap-3 text-sm  px-4 lg:px-6 py-2.5 flex items-center text-white hover:bg-primary_hover transition duration-300">
-              <svg class="w-5 h-5">
-                <use xlink:href="#plus-icon"></use>
+          <div class="flex items-center justify-end gap-2.5">
+            <button type="button" class="bg-[#EEE] rounded-xl gap-3 text-sm font-bold px-4 lg:px-6 py-3.5 flex items-center text-primary_gray hover:bg-gray-300 transition duration-300">
+              <svg class="w-6 h-6">
+                <use xlink:href="#close"></use>
               </svg>
-              Create a request
+              Cancel
             </button>
-            </div>
-
-            <div class="overflow-x-auto w-full pb-2 mb-2">
-              <table class="table-sorted">
-                <thead>
-                  <tr>
-                    <th class="px-6 py-3 text-sm text-[#667085] border-t border-b border-[#EAECF0]">
-                      <div class=" flex items-center text-nowrap gap-1 font-medium">
-                      Date
-                        
-                        <svg class="h-4 w-4 cursor-pointer sort" viewBox="0 0 16 16" fill="none">
-                          <path d="M7.9987 3.33325V12.6666M7.9987 12.6666L12.6654 7.99992M7.9987 12.6666L3.33203 7.99992" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-                    </th>
-                    <th class="px-6 py-3 text-sm text-[#667085] border-t border-b border-[#EAECF0]">
-                      <div class=" flex items-center text-nowrap gap-1 font-medium">
-                      Number
-                        
-                        <svg class="h-4 w-4 cursor-pointer sort" viewBox="0 0 16 16" fill="none">
-                          <path d="M7.9987 3.33325V12.6666M7.9987 12.6666L12.6654 7.99992M7.9987 12.6666L3.33203 7.99992" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-                    </th>
-                    <th class="px-6 py-3 text-sm text-[#667085] border-t border-b border-[#EAECF0]">
-                      <div class=" flex items-center text-nowrap gap-1 font-medium">
-                      Client
-                        
-                        <svg class="h-4 w-4 cursor-pointer sort" viewBox="0 0 16 16" fill="none">
-                          <path d="M7.9987 3.33325V12.6666M7.9987 12.6666L12.6654 7.99992M7.9987 12.6666L3.33203 7.99992" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-                    </th>
-                    <th class="px-6 py-3 text-sm text-[#667085] border-t border-b border-[#EAECF0]">
-                      <div class=" flex items-center text-nowrap gap-1 font-medium">
-                      Type
-                        
-                        <svg class="h-4 w-4 cursor-pointer sort" viewBox="0 0 16 16" fill="none">
-                          <path d="M7.9987 3.33325V12.6666M7.9987 12.6666L12.6654 7.99992M7.9987 12.6666L3.33203 7.99992" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-                    </th>
-                    <th class="px-6 py-3 text-sm text-[#667085] border-t border-b border-[#EAECF0]">
-                      <div class=" flex items-center text-nowrap gap-1 font-medium">
-                      Project
-                        
-                        <svg class="h-4 w-4 cursor-pointer sort" viewBox="0 0 16 16" fill="none">
-                          <path d="M7.9987 3.33325V12.6666M7.9987 12.6666L12.6654 7.99992M7.9987 12.6666L3.33203 7.99992" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-                    </th>
-                    <th class="px-6 py-3 text-sm text-[#667085] border-t border-b border-[#EAECF0]">
-                      <div class=" flex items-center text-nowrap gap-1 font-medium">
-                      Status
-                        
-                        <svg class="h-4 w-4 cursor-pointer sort" viewBox="0 0 16 16" fill="none">
-                          <path d="M7.9987 3.33325V12.6666M7.9987 12.6666L12.6654 7.99992M7.9987 12.6666L3.33203 7.99992" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-                    </th>
-                    <th class="px-6 py-3 text-sm text-[#667085] border-t border-b border-[#EAECF0]"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">12.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#ECFDF3] text-[#037847]">
-                        <span class="w-2 h-2 rounded-full bg-[#14BA6D]"></span>
-                        <span class="text-nowrap">Signed</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">13.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FBFFDB] text-[#C29B00]">
-                        <span class="w-2 h-2 rounded-full bg-[#FFCD2A]"></span>
-                        <span class="text-nowrap">On signing</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">4.05.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FDECEC] text-[#C20E0E]">
-                        <span class="w-2 h-2 rounded-full bg-[#FF2D1A]"></span>
-                        <span class="text-nowrap">Refusal</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">15.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#EFEFEF] text-[#989898]">
-                        <span class="w-2 h-2 rounded-full bg-[#B6B9B7]"></span>
-                        <span class="text-nowrap">Default</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">12.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#ECFDF3] text-[#037847]">
-                        <span class="w-2 h-2 rounded-full bg-[#14BA6D]"></span>
-                        <span class="text-nowrap">Signed</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">13.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FBFFDB] text-[#C29B00]">
-                        <span class="w-2 h-2 rounded-full bg-[#FFCD2A]"></span>
-                        <span class="text-nowrap">On signing</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">4.05.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FDECEC] text-[#C20E0E]">
-                        <span class="w-2 h-2 rounded-full bg-[#FF2D1A]"></span>
-                        <span class="text-nowrap">Refusal</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">15.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#EFEFEF] text-[#989898]">
-                        <span class="w-2 h-2 rounded-full bg-[#B6B9B7]"></span>
-                        <span class="text-nowrap">Default</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">12.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#ECFDF3] text-[#037847]">
-                        <span class="w-2 h-2 rounded-full bg-[#14BA6D]"></span>
-                        <span class="text-nowrap">Signed</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">13.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FBFFDB] text-[#C29B00]">
-                        <span class="w-2 h-2 rounded-full bg-[#FFCD2A]"></span>
-                        <span class="text-nowrap">On signing</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">4.05.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FDECEC] text-[#C20E0E]">
-                        <span class="w-2 h-2 rounded-full bg-[#FF2D1A]"></span>
-                        <span class="text-nowrap">Refusal</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">15.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#EFEFEF] text-[#989898]">
-                        <span class="w-2 h-2 rounded-full bg-[#B6B9B7]"></span>
-                        <span class="text-nowrap">Default</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">12.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 1
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#ECFDF3] text-[#037847]">
-                        <span class="w-2 h-2 rounded-full bg-[#14BA6D]"></span>
-                        <span class="text-nowrap">Signed</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">13.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 2
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FBFFDB] text-[#C29B00]">
-                        <span class="w-2 h-2 rounded-full bg-[#FFCD2A]"></span>
-                        <span class="text-nowrap">On signing</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">4.05.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 3
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#FDECEC] text-[#C20E0E]">
-                        <span class="w-2 h-2 rounded-full bg-[#FF2D1A]"></span>
-                        <span class="text-nowrap">Refusal</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-
-                  <tr class="group">
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="text-[#101828] text-sm font-medium">15.04.2024</div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      090-099-898
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name Client 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Type 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      Name of project 4
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <div class="flex items-center justify-center gap-1.5 rounded-2xl pl-1.5 pr-2 py-1.5 bg-[#EFEFEF] text-[#989898]">
-                        <span class="w-2 h-2 rounded-full bg-[#B6B9B7]"></span>
-                        <span class="text-nowrap">Default</span>
-                      </div>
-                    </td>
-                    <td class="px-6 py-2.5 leading-none text-sm text-primary_gray font-medium border-b border-[#EAECF0] group-hover:bg-[#FFF1EB] transition text-nowrap">
-                      <ul class="flex items-center gap-2">
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#pencil-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="text-primary_gray transition hover:text-primary px-2.5">
-                            <svg class="w-4 h-4 ">
-                              <use xlink:href="#trash-icon"></use>
-                            </svg>
-                          </button>
-                        </li>
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-                
-              </table>
-            </div>
+            <button type="submit" class="bg-primary rounded-xl gap-3 text-sm font-bold px-4 lg:px-6 py-3.5 flex items-center text-white hover:bg-primary_hover transition duration-300">
+              <svg class="w-6 h-6">
+                <use xlink:href="#outline-check"></use>
+              </svg>
+              Save information
+            </button>
           </div>
         </div>
-          
       </div>
     </div>
   </section>

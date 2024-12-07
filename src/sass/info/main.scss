@@ -473,7 +473,7 @@
   opacity: 1
 }
 
-.dropdown {
+.dropdown, .dropdown-phone {
   position: relative;
   text-align: left;
 
@@ -518,7 +518,7 @@
     }
   }
 
-  &-items {
+  &-items, .dropdown-phone-items {
     display: none;
     position: absolute;
     top: calc(100% + 8px);
@@ -533,7 +533,7 @@
     overflow-y: auto;
   }
 
-  &-item { 
+  &-item, .dropdown-phone-item { 
     display: block;
     color: #757575;
     font-size: 14px;

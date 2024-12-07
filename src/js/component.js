@@ -324,7 +324,7 @@ $( document ).ready(function() {
 
   $('.dropdown-item').click(function(e){
     e.preventDefault();
-    $(this).parents('.dropdown').find('.dropdown-label span').text($(this).text())
+    $(this).parents('.dropdown').find('.dropdown-label span').html($(this).html())
     $(this).parents('.dropdown').find('input').val($(this).data('value'))
     $(this).parents('.dropdown').find('.dropdown-items').slideToggle(200);
     $('.dropdown-portal').remove();
@@ -1567,5 +1567,19 @@ $('.slider-similar-slider').slick({
   $('#logo-file').on('change', function(){
     readURL(this, '');  //Change the image
   });
+
+    // dropdown-phone
+  $('.dropdown-phone-label').click(function(e){
+    e.preventDefault();
+    $(this).parents('.dropdown-phone').toggleClass('open')
+    $(this).parent().find('.dropdown-phone-items').slideToggle(200);
+  })
+
+  $('.dropdown-phone-item').click(function(e){
+    e.preventDefault();
+    $(this).parents('.dropdown-phone').find('.dropdown-phone-label span').html($(this).find('span').html())
+    $(this).parents('.dropdown-phone-wrap').find('[data-phone="phone"]').val($(this).data('value'))
+    $(this).parents('.dropdown-phone').find('.dropdown-phone-items').slideToggle(200);
+  })
 
 }) 
